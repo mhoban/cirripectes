@@ -7,10 +7,10 @@ library(naniar)
 library(plotly)
 library(viridis)
 library(beyonce)
+library(here)
 
-rm(list=ls())
 
-fish <- read_excel("../data/cirripectes_specimens.xlsx",sheet=1) %>%
+fish <- read_excel(here("data","cirripectes_specimens.xlsx"),sheet=1) %>%
   #filter((nominal_sp %in% c("quagga","lineopunctatus"))) %>%
   filter((nominal_sp %in% c("vanderbilti","redhead","variolosus"))) %>%
   mutate_if(is.character,as.factor) %>%
@@ -91,9 +91,6 @@ p <- ggbiplot(fish.pca,groups=fish$nominal_sp,var.axes = T,ellipse = T,loading.v
   xlab(paste0("PC1 (",pc1.explained,"% explained variance)")) +
   ylab(paste0("PC2 (",pc2.explained,"% explained variance)")) +
   theme(legend.position = "bottom")
-ggplotly(p)
+# ggplotly(p)
 quartz()
 p
-  # d <- vegdist(fish.data.imp$completeObs,method = "euclidean")
-# fmds <- metaMDS(fish.data.imp$completeObs,trymax=999,distance = "euclidean")
-# pmod <- adonis2(fish.data ~ nominal_sp,data=fish,method = "euclidean")

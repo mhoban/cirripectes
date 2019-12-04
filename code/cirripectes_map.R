@@ -11,6 +11,7 @@ library(maptools)
 library(mapview)
 library(mSpatial)
 library(sf)
+library(here)
 
 ##### gbif citation info ######
 # When using this dataset please use the following citation:
@@ -45,7 +46,6 @@ library(sf)
 ##### geocode new species occurrence records #####
 # gkey <- "<key>"
 # register_google(gkey)
-# setwd("~/projects/fangblennies/cirripectes/taxonomy/")
 # fish <- read_excel("data/cirripectes_specimens.xlsx") %>%
 #   mutate(place=gsub(",.*$","",locality)) %>% 
 #   mutate(place=gsub("Ducie","Ducie Island",place)) %>%
@@ -56,10 +56,8 @@ library(sf)
 #   distinct()
 #####
 
-rm(list=ls())
-
 # load c. variolosus and vanderbilti occurrence data as exported from gbif
-occurrence <- read_csv("../data/variolosus-vanderbilti-geocoded.csv") %>%
+occurrence <- read_csv(here("data","variolosus-vanderbilti-geocoded.csv")) %>%
   mutate(
     id=paste(str_to_upper(institutionCode),str_to_upper(catalogNumber)),
     lon=ifelse(decimalLongitude<0,decimalLongitude+360,decimalLongitude)
@@ -75,7 +73,7 @@ occurrence <- read_csv("../data/variolosus-vanderbilti-geocoded.csv") %>%
 
 # load c. matatakaro occurrence data
 # it has johnston stuck in there as a hypothetical location
-allspp_occurrence <- read_csv("../data/new_sp_occurrence.csv") %>%
+allspp_occurrence <- read_csv(here("data","new_sp_occurrence.csv")) %>%
   mutate(id=paste("RHJ",seq(1,nrow(.)))) %>%
   mutate(species="Cirripectes matatakaro (Johnston)") %>%
   rename(locality=address) %>%
@@ -149,10 +147,4 @@ ggplot() +
   
   xlab("Longitude") +
   ylab("Latitude")
-  # geom_polygon(aes(x=long,y=lat,group=group),fill="grey",color="black",alpha=0.6,data=newsp.dist) +
-  # geom_polygon(aes(x=long,y=lat,group=group),fill=NA,color="grey77",data=variolosus.dist) +
-  #geom_polygon(aes(x=long,y=lat,group=group),fill="grey",color="black",linetype="dashed",alpha=0.6,data=vanderbilti.dist) +
-  # geom_polygon(aes(x=long,y=lat,group=group),fill=NA,color="black",linetype="dashed",data=newsp.dist.j) +
-  # geom_point(aes(x=lon,y=lat),color="black",data=newsp_occurrence) +
-  # geom_point(aes(x=lon,y=lat),color="firebrick4",fill="firebrick4",data=johnston,shape=25) +
   

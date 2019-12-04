@@ -3,12 +3,11 @@ library(ggtree)
 library(ggplot2)
 library(treeio)
 library(phytools)
+library(here)
 
-# clear the workspace
-rm(list=ls())
 
 # load the tree data
-tree <- ggtree::read.mrbayes("../data/treebuild2.nex.con.tre")
+tree <- ggtree::read.mrbayes(here("data","treebuild2.nex.con.tre"))
 
 # Reroot the tree on the outgroup (Exallias brevis), giving it the same branch length that figtree would
 tree@phylo <- reroot(tree@phylo,60,position = tree@phylo$edge.length[which(tree@phylo$edge[,2]==60)]/2)

@@ -1,10 +1,11 @@
 library(tidyverse)
 library(poppr)
 library(pegas)
-rm(list=ls())
+library(here)
 
-alignment <- read.dna("sequence/vanderbilti-redhead-coi.fasta",format="fasta")
-samples <- read_tsv("samples.tab") %>%
+
+alignment <- read.dna(here("sequence","vanderbilti-redhead-coi.fasta"),format="fasta")
+samples <- read_tsv(here("data","samples.tab")) %>%
   filter(species == "Cirripectes vanderbilti") %>%
   mutate(island=str_replace(island,"Laysan","Laysan-Lisi-FFS"),
          island=str_replace(island,"Lisianski","Laysan-Lisi-FFS"),
@@ -19,6 +20,7 @@ v.pops <- DNAbin2genind(vanderbilti,pop=samples$island)
 strata(v.pops) <- data.frame(pop=samples$island)
 
 ff <- poppr.amova(v.pops,~pop)
+randtest(ff,nrepet = 1000)
 
 
 d <- dist.dna(vanderbilti)
@@ -28,7 +30,7 @@ haps.vanderbilti <- haplotype(vanderbilti)
 hap.div(haps.vanderbilti,variance = T)
 nuc.div(vanderbilti)
 
-alignment <- read.dna("sequence/vanderbilti-redhead-coi.fasta",format="fasta")
+alignment <- read.dna(here("sequence","vanderbilti-redhead-coi.fasta"),format="fasta")
 new.sp <- alignment[!grepl('Cvd',labels(alignment)),]
 hap.div(new.sp,variance = T)
 nuc.div(new.sp)

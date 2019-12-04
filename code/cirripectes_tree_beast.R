@@ -3,9 +3,9 @@ library(ggtree)
 library(ggplot2)
 library(deeptime)
 library(treeio)
-rm(list=ls)
+library(here)
 
-tree <- ggtree::read.beast("../data/blennies-combined-consensus-renamed.tre")
+tree <- ggtree::read.beast(here("data","blennies-combined-consensus-renamed.tre"))
 
 # duplicate tip taxa to drop from the final displayed tree
 tip_drop <- c("ANGBF9231-12_Cirripectes_auritus_0",
@@ -58,6 +58,8 @@ td <- as_tibble(treeio::drop.tip(tree,tip_drop)) %>%
 clr_map <- c("<0.60"="white","0.60-0.75"="gray75","0.75-0.95"="gray40","0.95+"="black")
 # cast tree data back to treedata
 tr <- as.treedata(td)
+
+#####
 p <- ggtree(tr,ladderize = T) + 
   # show root edge
   geom_rootedge(rootedge = 1) + 
@@ -69,15 +71,19 @@ p <- ggtree(tr,ladderize = T) +
   geom_range(range="height_0.95_HPD",color="red",alpha=0.3,size=2,branch.length = "height") +
   # show node symbols (call this after geom_range so the node points are on top)
   geom_nodepoint(aes(fill=posterior_bins),shape=21,alpha=1,size=3) +
+  # plot node ages
+  geom_label2(aes(label=round(height,2), subset=!isTip),hjust=-0.3) +
   # show time before present axis
   theme_tree2() + 
   # show legend for node support colors
   theme(legend.position = c(0.1,0.9)) +
-  guides(fill = guide_legend(override.aes = list(size = 5)))
+  guides(fill = guide_legend(override.aes = list(size = 5))) + 
+  xlim_tree(5)
+
 
 quartz()
 # reverse axis and extend the right side so tip labels are fully visible
-p <- revts(p) + xlim(-45,5) + scale_x_continuous(labels = abs, breaks=pretty(-tr@data$height,n=10)) 
+p <- revts(p) + scale_x_continuous(labels = abs, breaks=pretty(-tr@data$height,n=10)) 
 
 
 # add geoscale with geological epochs
