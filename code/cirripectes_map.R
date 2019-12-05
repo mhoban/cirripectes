@@ -57,7 +57,8 @@ library(here)
 #####
 
 # load c. variolosus and vanderbilti occurrence data as exported from gbif
-occurrence <- read_csv(here("data","variolosus-vanderbilti-geocoded.csv")) %>%
+# add in new species occurrence data and convert it to an sf object
+occurrence_sf <- read_csv(here("data","variolosus-vanderbilti-geocoded.csv")) %>%
   mutate(
     id=paste(str_to_upper(institutionCode),str_to_upper(catalogNumber)),
     lon=ifelse(decimalLongitude<0,decimalLongitude+360,decimalLongitude)
@@ -69,64 +70,19 @@ occurrence <- read_csv(here("data","variolosus-vanderbilti-geocoded.csv")) %>%
   filter(id != 'USNM 227978') %>% 
   filter(id != "CAS 228432") %>%
   filter(id != "SAIAB 32459") %>%
-  filter(id != "CAS 228409")
-
-# load c. matatakaro occurrence data
-# it has johnston stuck in there as a hypothetical location
-allspp_occurrence <- read_csv(here("data","new_sp_occurrence.csv")) %>%
-  mutate(id=paste("RHJ",seq(1,nrow(.)))) %>%
-  mutate(species="Cirripectes matatakaro (Johnston)") %>%
-  rename(locality=address) %>%
-  dplyr::select(id,lat,lon,locality,species)
-
-# slap all the occurrence data together
-allspp_occurrence <- allspp_occurrence %>%
+  filter(id != "CAS 228409") %>%
+  # add in new species records
   bind_rows(
-    # replicate the new species occurrence data but without Johnston
-    allspp_occurrence %>% 
-      filter(!str_detect(locality,fixed("Johnston",ignore_case = T))) %>%
+    read_csv(here("data","new_sp_occurrence.csv")) %>%
+      filter(!str_detect(address,'johnston')) %>% # drop the johnston "record", though
+      mutate(id=paste("RH",seq(1,nrow(.)))) %>%
       mutate(species="Cirripectes matatakaro") %>%
-      mutate(id=paste("RH",seq(1,nrow(.))))
+      rename(locality=address) %>%
+      dplyr::select(id,lat,lon,locality,species)
   ) %>%
-  bind_rows(occurrence) %>%
-  # set up display options
-  mutate(
-    line=case_when(
-      species == "Cirripectes matatakaro (Johnston)" ~ "dashed",
-      TRUE ~ "solid"
-    ),
-    color=case_when(
-      species == "Cirripectes variolosus" ~ "grey77",
-      species == "Cirripectes vanderbilti" ~ "white",
-      TRUE ~ "black"
-    ),
-    buffer=case_when(
-      species == "Cirripectes matatakaro (Johnston)" ~ 3,
-      TRUE ~ 2
-    ),
-    fill=case_when(
-      species == "Cirripectes matatakaro" ~ "grey55",
-      TRUE ~ as.character(NA)
-    ),
-    alpha=case_when(
-      species == "Cirripectes matatakaro" ~ 0.6,
-      TRUE ~ 1
-    )
-  ) %>%
-  mutate(species=factor(species))
-
-occurrence_sf <- st_as_sf(allspp_occurrence,coords = c("lon","lat"), crs = 4326)
-
-# will throw a warning we aren't concerned with
-suppressWarnings(
-  # collapse all the occurrence records by species and create convex hulls to
-  # approximate their areas of occurrence
-  occurrence_area <- occurrence_sf %>%
-    group_by( species, color, line, buffer, fill, alpha ) %>%
-    summarise( geometry = st_combine( geometry ) ) %>%
-    st_convex_hull() %>%
-    st_buffer(dist=.$buffer)
-)
+  mutate(lat=jitter(lat,amount=0.1),lon=jitter(lon,amount=0.3)) %>%
+  mutate(species=factor(species,levels = c("Cirripectes variolosus","Cirripectes vanderbilti","Cirripectes matatakaro"))) %>%
+  st_as_sf(.,coords = c("lon","lat"), crs = 4326)
 
 wrld2 = st_as_sf(map('world2', plot=F, fill=T))
 quartz()
@@ -135,16 +91,12 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2",
 #####
 ggplot() +
   geom_sf(data=wrld2, fill='gray20',color="lightgrey",size=0.07) +
-  geom_sf(aes(linetype=line,color=species, alpha=alpha, fill=fill),size=0.7,data=occurrence_area) + 
-  geom_point(aes(x=190.4664,y=16.7295),color="firebrick4",fill="firebrick4",shape=25, size=4) + 
-  geom_sf(data=occurrence_sf %>% filter(species == "Cirripectes matatakaro" | species == "Cirripectes vanderbilti"),size=2, color="black") +
-  scale_linetype_identity() + 
-  # scale_color_brewer(palette="Set2",guide=F) +
-  scale_color_manual(values=cbPalette,guide=F) +
-  scale_fill_identity() +
-  scale_alpha_identity() +
+  geom_point(aes(x=190.4664,y=16.7295),color="black",fill="black",shape=25, size=6) + #firebrick4
+  geom_sf(aes(shape=species,fill=species),color="black",data=occurrence_sf,size=3) +
+  # scale_fill_brewer(palette="Dark2",guide=F) +
+  scale_fill_manual(values=brewer.pal(n=8,name="Dark2")[c(1,4,6)],guide=F) +
+  scale_shape_manual(values=c(21,24,22),guide=F) +
   coord_sf(xlim=c(100,290), ylim=c(-60,60)) +
-  
   xlab("Longitude") +
   ylab("Latitude")
   
