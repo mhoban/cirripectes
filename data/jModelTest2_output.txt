@@ -1,0 +1,1278 @@
+-------------------------- jModeltest 2.1.10 v20160303 --------------------------
+(c) 2011-onwards D. Darriba, G.L. Taboada, R. Doallo and D. Posada,
+(1) Department of Biochemistry, Genetics and Immunology
+    University of Vigo, 36310 Vigo, Spain.
+(2) Department of Electronics and Systems
+    University of A Coruna, 15071 A Coruna, Spain.
+e-mail: ddarriba@udc.es, dposada@uvigo.es
+--------------------------------------------------------------------------------
+ 
+Tue Feb 04 22:38:30 HST 2020
+Linux 4.15.0-50-generic, arch: amd64, bits: 64, numcores: 32
+ 
+--------------------------------------------------------------------------------
+Citation: Darriba D, Taboada GL, Doallo R and Posada D. 2012.
+          "jModelTest 2: more models, new heuristics and parallel computing".
+          Nature Methods 9(8), 772.
+--------------------------------------------------------------------------------
+ 
+jModelTest 2.1.10 v20160303
+Copyright (C) 2011 D. Darriba, G.L. Taboada, R. Doallo and D. Posada
+This program comes with ABSOLUTELY NO WARRANTY
+This is free software, and you are welcome to redistribute it under certain
+conditions
+ 
+Notice: This program may contain errors. Please inspect results carefully.
+ 
+ 
+Arguments = -d cirripectes-684-reduced.nex -s 3 -i -g 4 -f -AICc -a -tr 20 -o model.txt
+
+Reading data file "cirripectes-684-reduced.nex"... OK.
+  number of sequences: 169
+  number of sites: 684
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*        COMPUTATION OF LIKELIHOOD SCORES WITH PHYML          *
+*                                                             *
+---------------------------------------------------------------
+ 
+::Settings::
+ 
+ Phyml version = 20130103
+ Phyml binary = PhyML_3.0_linux64
+ Phyml path = /home/mykle/sw/jmodeltest-2.1.10/exe/phyml/
+ Candidate models = 24
+   number of substitution schemes = 3
+   including models with equal/unequal base frequencies (+F)
+   including models with/without a proportion of invariable sites (+I)
+   including models with/without rate variation among sites (+G) (nCat = 4)
+ Optimized free parameters (K) = substitution parameters + 335 branch lengths + topology 
+ Base tree for likelihood calculations = ML tree
+ Tree topology search operation = BEST
+ 
+ 
+ 
+::Progress::
+ 
+Model 		 Exec. Time 	 Total Time 	 -lnL
+-------------------------------------------------------------------------
+HKY		00h:03:50:03	00h:03:50:05	    5288.3148	 (1/24)
+SYM+I		00h:05:43:05	00h:05:43:08	    4828.5985	 (2/24)
+JC+I		00h:06:08:05	00h:06:08:05	    5214.9366	 (3/24)
+K80		00h:04:03:02	00h:10:11:09	    5306.3387	 (4/24)
+GTR		00h:07:50:06	00h:11:42:01	    5261.6094	 (5/24)
+JC		00h:06:00:02	00h:11:44:02	    5648.4682	 (6/24)
+K80+I+G		00h:14:59:04	00h:14:59:04	    4814.4055	 (7/24)
+JC+I+G		00h:15:00:08	00h:15:00:08	    5193.5342	 (8/24)
+HKY+I		00h:15:08:00	00h:15:08:00	    4819.3459	 (9/24)
+K80+I		00h:15:25:08	00h:15:25:08	    4847.8938	 (10/24)
+HKY+I+G		00h:15:30:07	00h:15:30:07	    4776.8948	 (11/24)
+SYM+G		00h:15:41:01	00h:15:41:01	    4811.1879	 (12/24)
+F81		00h:16:23:01	00h:16:23:03	    5619.0914	 (13/24)
+SYM+I+G		00h:16:42:08	00h:16:42:08	    4799.0647	 (14/24)
+GTR+I		00h:17:44:00	00h:17:44:01	    4804.5721	 (15/24)
+HKY+G		00h:18:07:05	00h:18:07:05	    4791.1069	 (16/24)
+F81+I		00h:18:19:07	00h:18:19:07	    5180.1531	 (17/24)
+GTR+I+G		00h:18:26:02	00h:18:26:02	    4769.8953	 (18/24)
+SYM		00h:08:42:05	00h:18:54:07	    5274.0971	 (19/24)
+K80+G		00h:22:16:02	00h:22:16:02	    4825.5707	 (20/24)
+F81+I+G		00h:23:04:01	00h:23:04:01	    5158.1695	 (21/24)
+JC+G		00h:23:51:04	00h:23:51:04	    5205.2397	 (22/24)
+F81+G		00h:26:03:02	00h:26:03:02	    5167.9020	 (23/24)
+GTR+G		00h:29:02:00	00h:29:02:00	    4781.3703	 (24/24)
+ 
+   Model = JC
+   partition = 000000
+   -lnL = 5648.4682
+   K = 336 
+ 
+   Model = JC+I
+   partition = 000000
+   -lnL = 5214.9366
+   K = 337
+   p-inv = 0.6210 
+ 
+   Model = JC+G
+   partition = 000000
+   -lnL = 5205.2397
+   K = 337
+   gamma shape = 0.1820 
+ 
+   Model = JC+I+G
+   partition = 000000
+   -lnL = 5193.5342
+   K = 338
+   p-inv = 0.5930
+   gamma shape = 2.6820 
+ 
+   Model = F81
+   partition = 000000
+   -lnL = 5619.0914
+   K = 339
+   freqA = 0.2032 
+   freqC = 0.2722 
+   freqG = 0.2029 
+   freqT = 0.3218  
+ 
+   Model = F81+I
+   partition = 000000
+   -lnL = 5180.1530
+   K = 340
+   freqA = 0.2097 
+   freqC = 0.2726 
+   freqG = 0.1904 
+   freqT = 0.3274 
+   p-inv = 0.6210 
+ 
+   Model = F81+G
+   partition = 000000
+   -lnL = 5167.9020
+   K = 340
+   freqA = 0.2091 
+   freqC = 0.2715 
+   freqG = 0.1876 
+   freqT = 0.3319 
+   gamma shape = 0.1800 
+ 
+   Model = F81+I+G
+   partition = 000000
+   -lnL = 5158.1695
+   K = 341
+   freqA = 0.2103 
+   freqC = 0.2718 
+   freqG = 0.1879 
+   freqT = 0.3300 
+   p-inv = 0.5920
+   gamma shape = 2.5350 
+ 
+   Model = K80
+   partition = 010010
+   -lnL = 5306.3387
+   K = 337
+   kappa = 7.5593 (ti/tv = 3.7797) 
+ 
+   Model = K80+I
+   partition = 010010
+   -lnL = 4847.8938
+   K = 338
+   kappa = 8.9927 (ti/tv = 4.4964)
+   p-inv = 0.6230 
+ 
+   Model = K80+G
+   partition = 010010
+   -lnL = 4825.5707
+   K = 338
+   kappa = 10.0494 (ti/tv = 5.0247)
+   gamma shape = 0.1740 
+ 
+   Model = K80+I+G
+   partition = 010010
+   -lnL = 4814.4055
+   K = 339
+   kappa = 10.1038 (ti/tv = 5.0519)
+   p-inv = 0.5880
+   gamma shape = 1.7620 
+ 
+   Model = HKY
+   partition = 010010
+   -lnL = 5288.3148
+   K = 340
+   freqA = 0.2275 
+   freqC = 0.2493 
+   freqG = 0.2085 
+   freqT = 0.3148 
+   kappa = 7.3878 (ti/tv = 3.7822) 
+ 
+   Model = HKY+I
+   partition = 010010
+   -lnL = 4819.3459
+   K = 341
+   freqA = 0.2681 
+   freqC = 0.2437 
+   freqG = 0.1815 
+   freqT = 0.3067 
+   kappa = 9.3006 (ti/tv = 4.6381)
+   p-inv = 0.6230 
+ 
+   Model = HKY+G
+   partition = 010010
+   -lnL = 4791.1069
+   K = 341
+   freqA = 0.2695 
+   freqC = 0.2369 
+   freqG = 0.1718 
+   freqT = 0.3219 
+   kappa = 10.8994 (ti/tv = 5.4170)
+   gamma shape = 0.1790 
+ 
+   Model = HKY+I+G
+   partition = 010010
+   -lnL = 4776.8948
+   K = 342
+   freqA = 0.2721 
+   freqC = 0.2380 
+   freqG = 0.1670 
+   freqT = 0.3228 
+   kappa = 11.3380 (ti/tv = 5.6296)
+   p-inv = 0.5810
+   gamma shape = 1.4060 
+ 
+   Model = SYM
+   partition = 012345
+   -lnL = 5274.0971
+   K = 341
+   R(a) [AC] =  1.8260
+   R(b) [AG] =  12.4127
+   R(c) [AT] =  3.5732
+   R(d) [CG] =  0.5492
+   R(e) [CT] =  14.9376
+   R(f) [GT] =  1.0000 
+ 
+   Model = SYM+I
+   partition = 012345
+   -lnL = 4828.5985
+   K = 342
+   R(a) [AC] =  1.3635
+   R(b) [AG] =  14.0099
+   R(c) [AT] =  3.1219
+   R(d) [CG] =  0.6160
+   R(e) [CT] =  15.5696
+   R(f) [GT] =  1.0000
+   p-inv = 0.6210 
+ 
+   Model = SYM+G
+   partition = 012345
+   -lnL = 4811.1879
+   K = 342
+   R(a) [AC] =  1.2562
+   R(b) [AG] =  14.3261
+   R(c) [AT] =  3.0127
+   R(d) [CG] =  0.6033
+   R(e) [CT] =  16.4058
+   R(f) [GT] =  1.0000
+   gamma shape = 0.1800 
+ 
+   Model = SYM+I+G
+   partition = 012345
+   -lnL = 4799.0647
+   K = 343
+   R(a) [AC] =  1.3412
+   R(b) [AG] =  14.5731
+   R(c) [AT] =  3.2111
+   R(d) [CG] =  0.6217
+   R(e) [CT] =  17.9261
+   R(f) [GT] =  1.0000
+   p-inv = 0.5840
+   gamma shape = 1.7820 
+ 
+   Model = GTR
+   partition = 012345
+   -lnL = 5261.6094
+   K = 344
+   freqA = 0.2081 
+   freqC = 0.2607 
+   freqG = 0.2210 
+   freqT = 0.3101 
+   R(a) [AC] =  2.0230
+   R(b) [AG] =  14.7032
+   R(c) [AT] =  3.5890
+   R(d) [CG] =  0.5931
+   R(e) [CT] =  13.5112
+   R(f) [GT] =  1.0000 
+ 
+   Model = GTR+I
+   partition = 012345
+   -lnL = 4804.5721
+   K = 345
+   freqA = 0.2487 
+   freqC = 0.2681 
+   freqG = 0.1673 
+   freqT = 0.3160 
+   R(a) [AC] =  0.9032
+   R(b) [AG] =  14.8814
+   R(c) [AT] =  2.0219
+   R(d) [CG] =  0.6484
+   R(e) [CT] =  9.9773
+   R(f) [GT] =  1.0000
+   p-inv = 0.6240 
+ 
+   Model = GTR+G
+   partition = 012345
+   -lnL = 4781.3703
+   K = 345
+   freqA = 0.2558 
+   freqC = 0.2614 
+   freqG = 0.1571 
+   freqT = 0.3257 
+   R(a) [AC] =  0.8193
+   R(b) [AG] =  15.6055
+   R(c) [AT] =  1.5903
+   R(d) [CG] =  0.6848
+   R(e) [CT] =  9.5288
+   R(f) [GT] =  1.0000
+   gamma shape = 0.1670 
+ 
+   Model = GTR+I+G
+   partition = 012345
+   -lnL = 4769.8953
+   K = 346
+   freqA = 0.2592 
+   freqC = 0.2610 
+   freqG = 0.1556 
+   freqT = 0.3243 
+   R(a) [AC] =  0.7852
+   R(b) [AG] =  15.7211
+   R(c) [AT] =  1.6003
+   R(d) [CG] =  0.7045
+   R(e) [CT] =  10.0980
+   R(f) [GT] =  1.0000
+   p-inv = 0.5890
+   gamma shape = 1.6110 
+ 
+  Best-fit models should be reoptimized for comparison with unconstrained likelihood
+ 
+Computation of likelihood scores completed. It took 00h:29:02:01.
+ 
+
+
+
+---------------------------------------------------------------
+*                                                             *
+*        CORRECTED AKAIKE INFORMATION CRITERION (AICc)        *
+*                                                             *
+---------------------------------------------------------------
+ 
+ Sample size: 684.0
+ 
+ Model selected: 
+   Model = HKY+I+G
+   partition = 010010
+   -lnL = 4776.8948
+   K = 342
+   freqA = 0.2721 
+   freqC = 0.2380 
+   freqG = 0.1670 
+   freqT = 0.3228 
+   kappa = 11.3380 (ti/tv = 5.6296)
+   p-inv = 0.5810
+   gamma shape = 1.4060 
+ 
+Tree for the best AICc model = (AUSTR546_13_Cirripectes_jenningsi:0.01312032,AUST_547_Cirripectes_jenningsi:0.00000020,((((((AUSTR533_13_Cirripectes_quagga:0.00165364,(AUST_165_Cirripectes_quagga:0.00000000,KUT_800_Cirripectes_quagga:0.00000005):0.00000007):0.00000000,(UKFBI168_08_Cirripectes_quagga:0.00000000,KU800_Cirripectes_quagga:0.00184165):0.00000000):0.00161479,((MBIO2924_Cirripectes_quagga:0.00000000,(GAM_109_Cirripectes_quagga:0.00159382,(GAM_99_Cirripectes_quagga:0.00000000,(MBFA179_07_Cirripectes_quagga:0.00000000,(AUSTR401_13_Cirripectes_quagga:0.00000006,(FPFLB304_12_Cirripectes_quagga:0.00000005,FLMOO_998_Cirripectes_quagga:0.00000000):0.00159366):0.00000006):0.00000012):0.00000006):0.00000011):0.00000006,((FPFLB317_12_Cirripectes_quagga:0.00000005,FLMOO_1013_Cirripectes_quagga:0.00000000):0.00159387,((AUST_168_Cirripectes_quagga:0.00000000,(FPFLB369_12_Cirripectes_quagga:0.00000005,FLMOO_1124_Cirripectes_quagga:0.00000000):0.00000013):0.00320659,(MBIO2914_Cirripectes_quagga:0.00000000,(MBFA178_07_Cirripectes_quagga:0.00000012,AUST_402_Cirripectes_quagga:0.00000000):0.00000005):0.00159670):0.00000007):0.00000007):0.00158477):0.00660492,(FLHI781_14_Cirripectes_lineopunctatus:0.00166935,(FLHI377_09_Cirripectes_lineopunctatus:0.00000000,FLHI420_09_Cirripectes_lineopunctatus:0.00000004):0.00000006):0.00000006):0.00161401,FLHI827_14_Cirripectes_lineopunctatus:0.00000029):0.08957389,(((DRRA1725_12_Cirripectes_patuki:0.00309439,DRRA1746_12_Cirripectes_patuki:0.00000000):0.03762441,((AUST_550_Cirripectes_alboapicalis:0.00153621,(AUSTR398_13_Cirripectes_alboapicalis:0.00000000,(GAM_511_Cirripectes_alboapicalis:0.00000011,GAM_508_Cirripectes_alboapicalis:0.00153704):0.00000009):0.00000010):0.06177971,(AUST_546_Cirripectes_obscurus:0.00149723,(FLHI849_14_Cirripectes_obscurus:0.00000000,FLHI855_14_Cirripectes_cf_obscurus:0.00000012):0.00177906):0.02497713):0.02721305):0.07110794,(((KU4315_Cirripectes_polyzona:0.00000007,(UKFBJ563_08_Cirripectes_polyzona:0.00000013,PHILA1568_15_Cirripectes_polyzona:0.00972447):0.00172178):0.05336586,((((GAMBA023_12_Cirripectes_matatakaro_sp_nov:0.00157224,GAMBA024_12_Cirripectes_matatakaro_sp_nov:0.00000013):0.01234711,(MHCV006_Cirripectes_sp_nov:0.00159416,(AUSTR240_13_Cirripectes_matatakaro_sp_nov:0.00159105,(MARQ139_12_Cirripectes_matatakaro_sp_nov:0.00000000,(Crv_004_Cirripectes_matatakaro_sp_nov:0.00197282,(Csg_004_Cirripectes_matatakaro_sp_nov:0.00197707,(Crv_006_Cirripectes_matatakaro_sp_nov:0.00000000,Csg_005_Cirripectes_matatakaro_sp_nov:0.00400756):0.00000006):0.00000008):0.00000006):0.00000012):0.00000006):0.00247573):0.01457867,(FLHI456_12_Cirripectes_vanderbilti:0.00366846,(Cvd_081_Cirripectes_vanderbilti:0.00000006,(MHCV003_Cirripectes_vanderbilti:0.00478692,(FLHI895_14_Cirripectes_vanderbilti:0.00161467,(FLHI247_08_Cirripectes_vanderbilti:0.00000000,(MHCV001_Cirripectes_vanderbilti:0.00000000,(MHCV005_Cirripectes_vanderbilti:0.00314838,(FLHI463_12_Cirripectes_vanderbilti:0.00324012,(FLHI454_12_Cirripectes_vanderbilti:0.00000000,(FLHI511_12_Cirripectes_vanderbilti:0.00000000,(Cvd_062_Cirripectes_vanderbilti:0.00324692,(FLHI262_08_Cirripectes_vanderbilti:0.00160343,(Cvd_061_Cirripectes_vanderbilti:0.00161804,(Cvd_043_Cirripectes_vanderbilti:0.00161801,(Cvd_077_Cirripectes_vanderbilti:0.00161653,(FLHI1126_14_Cirripectes_vanderbilti:0.00000000,((((FLHI242_08_Cirripectes_vanderbilti:0.00179113,FLHI464_12_Cirripectes_vanderbilti:0.00545210):0.00000026,(FLHI432_12_Cirripectes_vanderbilti:0.00000048,FLHI436_12_Cirripectes_vanderbilti:0.00447989):0.00213745):0.00000011,(FLHI428_12_Cirripectes_vanderbilti:0.00000000,(FLHI447_12_Cirripectes_vanderbilti:0.00000358,FLHI635_12_Cirripectes_vanderbilti:0.00174704):0.00000344):0.00322968):0.00000006,(FLHI376_09_Cirripectes_vanderbilti:0.00000006,FLHI829_14_Cirripectes_vanderbilti:0.00000000):0.00160375):0.00000005):0.00000005):0.00000012):0.00000012):0.00000011):0.00000012):0.00000011):0.00000006):0.00000006):0.00000006):0.00000005):0.00000006):0.00000006):0.00000006):0.00156788):0.00132979):0.02421778):0.03371863,(((((MBFA979_07_Cirripectes_fuscoguttatus:0.00000011,MBIO17154_Cirripectes_fuscoguttatus:0.00000000):0.00292770,(MBFA978_07_Cirripectes_fuscoguttatus:0.00000011,MBIO17144_Cirripectes_fuscoguttatus:0.00000000):0.00335019):0.00320956,(AUST_156_Cirripectes_fuscoguttatus:0.00288405,(AUSTR155_13_Cirripectes_fuscoguttatus:0.00000012,AUST_397_Cirripectes_fuscoguttatus:0.00000000):0.00179266):0.00000006):0.06089036,(REU1844_Cirripectes_castaneus:0.00000000,(SBF707_11_Cirripectes_cf_randalli:0.00000003,((COLOR413_15_Cirripectes_cf_randalli:0.00000006,(SBF680_11_Cirripectes_cf_randalli:0.00000006,((SBF750_11_Cirripectes_cf_randalli:0.00000012,REU2554_Cirripectes_castaneus:0.00000000):0.00477745,(COLOR408_15_Cirripectes_cf_randalli:0.00000012,R0101_131_Cirripectes_castaneus:0.00000000):0.00162520):0.00158095):0.00000008):0.00000010,(((SBF751_11_Cirripectes_cf_randalli:0.00000012,REU2555_Cirripectes_castaneus:0.00000000):0.00315977,(REU1763_Cirripectes_castaneus:0.00000000,(R0101_171_Cirripectes_castaneus:0.00000000,(SBF493_11_Cirripectes_cf_randalli:0.00000012,REU0146_Cirripectes_castaneus:0.00000000):0.00160369):0.00000011):0.00000013):0.00000012,(SBF706_11_Cirripectes_cf_randalli:0.00000012,REU1843_Cirripectes_castaneus:0.00000000):0.00160022):0.00000012):0.00156667):0.00000012):0.07549598):0.01292759,(((ADC11_2358_1_Cirripectes_auritus:0.00000006,SAIAB83881_Cirripectes_heemstraorum:0.00000000):0.00000011,((ANGBF9231_12_Cirripectes_auritus:0.00000012,SAIAB83624_Cirripectes_heemstraorum:0.00000000):0.00158303,((ANGBF9244_12_Cirripectes_auritus:0.00000000,DSFSG709_11_Cirripectes_auritus:0.00000006):0.00000006,(ADC12_2359A_1_Cirripectes_heemstraorum:0.00158501,(DSFSG737_11_Cirripectes_auritus:0.00000012,ADC_2358_2_Cirripectes_auritus:0.00000000):0.00158415):0.00000009):0.00000012):0.00000011):0.07703647,(RESIC057_11_Cirripectes_chelomatus:0.00813147,((PHILA2321_18_Cirripectes_filamentosus:0.00328579,(GBMIN95957_17_Cirripectes_filamentosus:0.00188940,PHILV074_15_Cirripectes_filamentosus:0.00000013):0.00000006):0.00164705,((GBMIN96357_17_Cirripectes_filamentosus:0.00000011,1758_Cirripectes_filamentosus:0.00000000):0.00000008,((SAIAB187_06_Cirripectes_filamentosus:0.00000000,(KU6917_Cirripectes_filamentosus:0.00557654,1656_Cirripectes_perustus:0.00000003):0.00000003):0.00156013,(SAIAB026_06_Cirripectes_filamentosus:0.00466449,(ROT134_Cirripectes_filamentosus:0.00000000,ROT134_Cirripectes_filamentosus_2:0.00000006):0.00396864):0.00222098):0.00165979):0.00325775):0.02405742):0.05053275):0.01589183):0.00579882):0.00721292):0.01972294,(((AUST_163_Cirripectes_variolosus:0.00000012,(AUST_056_Cirripectes_variolosus:0.00000000,(Crv_026_Cirripectes_variolosus:0.00199865,((FPFLB356_12_Cirripectes_variolosus:0.00000013,FLMOO_1106_Cirripectes_variolosus:0.00000000):0.00157147,((MBIO3084_Cirripectes_variolosus:0.00000000,(GAM_793_Cirripectes_variolosus:0.00314746,(MBFA187_07_Cirripectes_variolosus:0.00000000,(((AUSTR052_13_Cirripectes_variolosus:0.00000005,GAM_144_Cirripectes_variolosus:0.00000000):0.00316142,(GAM_145_Cirripectes_variolosus:0.00315505,((MARQ_071_Cirripectes_variolosus:0.00157714,(Crv_024_Cirripectes_variolosus:0.00200109,MARQ_074_Cirripectes_variolosus:0.00316479):0.00000010):0.00322908,MARQ_073_Cirripectes_variolosus:0.00480677):0.00317026):0.00000007):0.00000007,(AUST_164_Cirripectes_variolosus:0.00157891,(GAM_143_Cirripectes_variolosus:0.00000000,(MBFA186_07_Cirripectes_variolosus:0.00000006,MBIO3074_Cirripectes_variolosus:0.00000000):0.00000012):0.00157183):0.00157136):0.00156967):0.00000000):0.00000012):0.00000011,(AUST_162_Cirripectes_variolosus:0.00474214,GAM_794_Cirripectes_variolosus:0.00000000):0.00000000):0.00156943):0.00000010):0.00000000):0.00315540):0.05061358,((UKFBI528_08_Cirripectes_stigmaticus:0.00000013,KUT_4023_Cirripectes_stigmaticus:0.00000000):0.00000005,((UKFBK089_08_Cirripectes_stigmaticus:0.00000011,KUT_687_Cirripectes_stigmaticus:0.00000000):0.00612482,Pta_BLN0831:0.53613646):0.00187907):0.03008224):0.00192566,(SBF752_11_Cirripectes_castaneus:0.00000006,(REU2559_Cirripectes_stigmaticus:0.00000000,((SBF598_11_Cirripectes_castaneus:0.00000006,REU1013_Cirripectes_stigmaticus:0.00000000):0.00485089,(UG0609_Cirripectes_stigmaticus:0.00000006,(LIFS794_08_Cirripectes_castaneus:0.00000013,((LIFS795_08_Cirripectes_castaneus:0.00000000,UG0610_Cirripectes_stigmaticus:0.00000012):0.00157150,((LIFS793_08_Cirripectes_castaneus:0.00000000,UG0608_Cirripectes_stigmaticus:0.00000006):0.00156809,(((SBF725_11_Cirripectes_castaneus:0.00000006,REU189_2_Cirripectes_stigmaticus:0.00000000):0.00160165,(RESIC180_11_Cirripectes_castaneus:0.00000000,KU7056_Cirripectes_castaneus:0.00000006):0.00000006):0.00320097,(((RS7740_Cirripectes_castaneus:0.00000000,(ROT604_Cirripectes_castaneus:0.00000011,GBMIN121923_17_Cirripectes_castaneus:0.00000007):0.00000009):0.00165563,(SAIAB1074_08_Cirripectes_castaneus:0.00000006,((COLOR469_15_Cirripectes_castaneus:0.00000012,R0301_021_Cirripectes_stigmaticus:0.00000000):0.00649556,(SBF724_11_Cirripectes_castaneus:0.00000012,REU189_1_Cirripectes_stigmaticus:0.00000000):0.00160903):0.00000006):0.00000006):0.00159600,((PHILA1567_15_Cirripectes_castaneus:0.00160635,(GBMIN131289_17_Cirripectes_castaneus:0.00000000,1325_Cirripectes_castaneus:0.00000007):0.00472877):0.00000012,(SAIAB024_06_Cirripectes_castaneus:0.00328752,SAIAB025_06_Cirripectes_castaneus:0.00162943):0.00000011):0.00000008):0.00000012):0.00000012):0.00000006):0.00165821):0.00000006):0.00000007):0.00334808):0.00000000):0.02061196):0.01319369):0.13284938):0.03101910):0.12186398);
+ 
+ 
+* AICc MODEL SELECTION : Selection uncertainty
+ 
+Model             -lnL    K     AICc       delta       weight   cumWeight
+------------------------------------------------------------------------- 
+HKY+I+G     4776.89476   342  10925.801250   0.000000    0.999868   0.999868 
+GTR+I+G     4769.89531   346  10944.324745  18.523494   9.50e-005   0.999963 
+HKY+G       4791.10692   341  10946.213840  20.412590   3.69e-005   1.000000 
+GTR+G       4781.37031   345  10959.071981  33.270731   5.96e-008   1.000000 
+K80+I+G     4814.40554   339  10976.927359  51.126109   7.91e-012   1.000000 
+SYM+I+G     4799.06472   343  10978.200028  52.398778   4.18e-012   1.000000 
+K80+G       4825.57073   338  10991.384938  65.583688   5.74e-015   1.000000 
+SYM+G       4811.18789   342  10994.387510  68.586260   1.28e-015   1.000000 
+HKY+I       4819.34591   341  11002.691820  76.890570   2.01e-017   1.000000 
+GTR+I       4804.57208   345  11005.475521  79.674271   5.00e-018   1.000000 
+SYM+I       4828.59852   342  11029.208770  103.407520   3.51e-023   1.000000 
+K80+I       4847.89378   338  11036.031038  110.229788   1.16e-024   1.000000 
+F81+I+G     5158.16945   341  11680.338900  754.537650   1.43e-164   1.000000 
+F81+G       5167.90196   340  11691.838905  766.037655   4.54e-167   1.000000 
+F81+I       5180.15305   340  11716.341085  790.539835   2.17e-172   1.000000 
+JC+I+G      5193.53415   338  11727.311778  801.510528   9.00e-175   1.000000 
+JC+G        5205.23968   337  11742.895545  817.094295   3.72e-178   1.000000 
+JC+I        5214.93663   337  11762.289445  836.488195   2.28e-182   1.000000 
+GTR         5261.60939   344  11911.395771  985.594521   9.57e-215   1.000000 
+SYM         5274.09706   341  11912.194120  986.392870   6.42e-215   1.000000 
+HKY         5288.31484   340  11932.664665  1006.863415   0.00e+000   1.000000 
+K80         5306.33874   337  11945.093665  1019.292415   0.00e+000   1.000000 
+F81         5619.09143   339  12586.299139  1660.497889   0.00e+000   1.000000 
+JC          5648.46818   336  12621.570366  1695.769116   0.00e+000   1.000000
+-------------------------------------------------------------------------
+-lnL:	negative log likelihod
+ K:	number of estimated parameters
+ AICc:	Corrected Akaike Information Criterion
+ delta:	AICc difference
+ weight:	AICc weight
+ cumWeight:	cumulative AICc weight
+ 
+ 
+* AICc MODEL SELECTION : Confidence interval
+ 
+There are 24 models in the 100% confidence interval: [ HKY+I+G GTR+I+G HKY+G GTR+G K80+I+G SYM+I+G K80+G SYM+G HKY+I GTR+I SYM+I K80+I F81+I+G F81+G F81+I JC+I+G JC+G JC+I GTR SYM HKY K80 F81 JC ] 
+ 
+ 
+* AICc MODEL SELECTION : Best Model's command line
+ 
+phyml  -i /tmp/jmodeltest881308408200579120.phy -d nt -n 1 -b 0 --run_id HKY+I+G -m 010010 -f m -v e -c 4 -a e --no_memory_check -o tlr -s BEST
+ 
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*                    MODEL AVERAGED PHYLOGENY                 *
+*                                                             *
+---------------------------------------------------------------
+ 
+Selection criterion: . . . . AICc
+Confidence interval: . . . . 1.00
+Consensus type:. . . . . . . 50% majority rule
+ 
+ 
+Using 24 models in the 1.00 confidence interval = HKY+I+G GTR+I+G HKY+G GTR+G K80+I+G SYM+I+G K80+G SYM+G HKY+I GTR+I SYM+I K80+I F81+I+G F81+G F81+I JC+I+G JC+G JC+I GTR SYM HKY K80 F81 JC  
+ 
+Species in order:
+ 
+    1. AUSTR546_13_Cirripectes_jenningsi
+    2. AUST_547_Cirripectes_jenningsi
+    3. AUSTR533_13_Cirripectes_quagga
+    4. AUST_165_Cirripectes_quagga
+    5. KUT_800_Cirripectes_quagga
+    6. UKFBI168_08_Cirripectes_quagga
+    7. KU800_Cirripectes_quagga
+    8. MBIO2924_Cirripectes_quagga
+    9. GAM_109_Cirripectes_quagga
+    10. GAM_99_Cirripectes_quagga
+    11. MBFA179_07_Cirripectes_quagga
+    12. AUSTR401_13_Cirripectes_quagga
+    13. FPFLB304_12_Cirripectes_quagga
+    14. FLMOO_998_Cirripectes_quagga
+    15. FPFLB317_12_Cirripectes_quagga
+    16. FLMOO_1013_Cirripectes_quagga
+    17. AUST_168_Cirripectes_quagga
+    18. FPFLB369_12_Cirripectes_quagga
+    19. FLMOO_1124_Cirripectes_quagga
+    20. MBIO2914_Cirripectes_quagga
+    21. MBFA178_07_Cirripectes_quagga
+    22. AUST_402_Cirripectes_quagga
+    23. FLHI781_14_Cirripectes_lineopunctatus
+    24. FLHI377_09_Cirripectes_lineopunctatus
+    25. FLHI420_09_Cirripectes_lineopunctatus
+    26. FLHI827_14_Cirripectes_lineopunctatus
+    27. DRRA1725_12_Cirripectes_patuki
+    28. DRRA1746_12_Cirripectes_patuki
+    29. AUST_550_Cirripectes_alboapicalis
+    30. AUSTR398_13_Cirripectes_alboapicalis
+    31. GAM_511_Cirripectes_alboapicalis
+    32. GAM_508_Cirripectes_alboapicalis
+    33. AUST_546_Cirripectes_obscurus
+    34. FLHI849_14_Cirripectes_obscurus
+    35. FLHI855_14_Cirripectes_cf_obscurus
+    36. KU4315_Cirripectes_polyzona
+    37. UKFBJ563_08_Cirripectes_polyzona
+    38. PHILA1568_15_Cirripectes_polyzona
+    39. GAMBA023_12_Cirripectes_matatakaro_sp_nov
+    40. GAMBA024_12_Cirripectes_matatakaro_sp_nov
+    41. MHCV006_Cirripectes_sp_nov
+    42. AUSTR240_13_Cirripectes_matatakaro_sp_nov
+    43. MARQ139_12_Cirripectes_matatakaro_sp_nov
+    44. Crv_004_Cirripectes_matatakaro_sp_nov
+    45. Csg_004_Cirripectes_matatakaro_sp_nov
+    46. Crv_006_Cirripectes_matatakaro_sp_nov
+    47. Csg_005_Cirripectes_matatakaro_sp_nov
+    48. FLHI456_12_Cirripectes_vanderbilti
+    49. Cvd_081_Cirripectes_vanderbilti
+    50. MHCV003_Cirripectes_vanderbilti
+    51. FLHI895_14_Cirripectes_vanderbilti
+    52. FLHI247_08_Cirripectes_vanderbilti
+    53. MHCV001_Cirripectes_vanderbilti
+    54. MHCV005_Cirripectes_vanderbilti
+    55. FLHI463_12_Cirripectes_vanderbilti
+    56. FLHI454_12_Cirripectes_vanderbilti
+    57. FLHI511_12_Cirripectes_vanderbilti
+    58. Cvd_062_Cirripectes_vanderbilti
+    59. FLHI262_08_Cirripectes_vanderbilti
+    60. Cvd_061_Cirripectes_vanderbilti
+    61. Cvd_043_Cirripectes_vanderbilti
+    62. Cvd_077_Cirripectes_vanderbilti
+    63. FLHI1126_14_Cirripectes_vanderbilti
+    64. FLHI242_08_Cirripectes_vanderbilti
+    65. FLHI464_12_Cirripectes_vanderbilti
+    66. FLHI432_12_Cirripectes_vanderbilti
+    67. FLHI436_12_Cirripectes_vanderbilti
+    68. FLHI428_12_Cirripectes_vanderbilti
+    69. FLHI447_12_Cirripectes_vanderbilti
+    70. FLHI635_12_Cirripectes_vanderbilti
+    71. FLHI376_09_Cirripectes_vanderbilti
+    72. FLHI829_14_Cirripectes_vanderbilti
+    73. MBFA979_07_Cirripectes_fuscoguttatus
+    74. MBIO17154_Cirripectes_fuscoguttatus
+    75. MBFA978_07_Cirripectes_fuscoguttatus
+    76. MBIO17144_Cirripectes_fuscoguttatus
+    77. AUST_156_Cirripectes_fuscoguttatus
+    78. AUSTR155_13_Cirripectes_fuscoguttatus
+    79. AUST_397_Cirripectes_fuscoguttatus
+    80. REU1844_Cirripectes_castaneus
+    81. SBF707_11_Cirripectes_cf_randalli
+    82. COLOR413_15_Cirripectes_cf_randalli
+    83. SBF680_11_Cirripectes_cf_randalli
+    84. SBF750_11_Cirripectes_cf_randalli
+    85. REU2554_Cirripectes_castaneus
+    86. COLOR408_15_Cirripectes_cf_randalli
+    87. R0101_131_Cirripectes_castaneus
+    88. SBF751_11_Cirripectes_cf_randalli
+    89. REU2555_Cirripectes_castaneus
+    90. REU1763_Cirripectes_castaneus
+    91. R0101_171_Cirripectes_castaneus
+    92. SBF493_11_Cirripectes_cf_randalli
+    93. REU0146_Cirripectes_castaneus
+    94. SBF706_11_Cirripectes_cf_randalli
+    95. REU1843_Cirripectes_castaneus
+    96. ADC11_2358_1_Cirripectes_auritus
+    97. SAIAB83881_Cirripectes_heemstraorum
+    98. ANGBF9231_12_Cirripectes_auritus
+    99. SAIAB83624_Cirripectes_heemstraorum
+    100. ANGBF9244_12_Cirripectes_auritus
+    101. DSFSG709_11_Cirripectes_auritus
+    102. ADC12_2359A_1_Cirripectes_heemstraorum
+    103. DSFSG737_11_Cirripectes_auritus
+    104. ADC_2358_2_Cirripectes_auritus
+    105. RESIC057_11_Cirripectes_chelomatus
+    106. PHILA2321_18_Cirripectes_filamentosus
+    107. GBMIN95957_17_Cirripectes_filamentosus
+    108. PHILV074_15_Cirripectes_filamentosus
+    109. GBMIN96357_17_Cirripectes_filamentosus
+    110. 1758_Cirripectes_filamentosus
+    111. SAIAB187_06_Cirripectes_filamentosus
+    112. KU6917_Cirripectes_filamentosus
+    113. 1656_Cirripectes_perustus
+    114. SAIAB026_06_Cirripectes_filamentosus
+    115. ROT134_Cirripectes_filamentosus
+    116. ROT134_Cirripectes_filamentosus_2
+    117. AUST_163_Cirripectes_variolosus
+    118. AUST_056_Cirripectes_variolosus
+    119. Crv_026_Cirripectes_variolosus
+    120. FPFLB356_12_Cirripectes_variolosus
+    121. FLMOO_1106_Cirripectes_variolosus
+    122. MBIO3084_Cirripectes_variolosus
+    123. GAM_793_Cirripectes_variolosus
+    124. MBFA187_07_Cirripectes_variolosus
+    125. AUSTR052_13_Cirripectes_variolosus
+    126. GAM_144_Cirripectes_variolosus
+    127. GAM_145_Cirripectes_variolosus
+    128. MARQ_071_Cirripectes_variolosus
+    129. Crv_024_Cirripectes_variolosus
+    130. MARQ_074_Cirripectes_variolosus
+    131. MARQ_073_Cirripectes_variolosus
+    132. AUST_164_Cirripectes_variolosus
+    133. GAM_143_Cirripectes_variolosus
+    134. MBFA186_07_Cirripectes_variolosus
+    135. MBIO3074_Cirripectes_variolosus
+    136. AUST_162_Cirripectes_variolosus
+    137. GAM_794_Cirripectes_variolosus
+    138. UKFBI528_08_Cirripectes_stigmaticus
+    139. KUT_4023_Cirripectes_stigmaticus
+    140. UKFBK089_08_Cirripectes_stigmaticus
+    141. KUT_687_Cirripectes_stigmaticus
+    142. Pta_BLN0831
+    143. SBF752_11_Cirripectes_castaneus
+    144. REU2559_Cirripectes_stigmaticus
+    145. SBF598_11_Cirripectes_castaneus
+    146. REU1013_Cirripectes_stigmaticus
+    147. UG0609_Cirripectes_stigmaticus
+    148. LIFS794_08_Cirripectes_castaneus
+    149. LIFS795_08_Cirripectes_castaneus
+    150. UG0610_Cirripectes_stigmaticus
+    151. LIFS793_08_Cirripectes_castaneus
+    152. UG0608_Cirripectes_stigmaticus
+    153. SBF725_11_Cirripectes_castaneus
+    154. REU189_2_Cirripectes_stigmaticus
+    155. RESIC180_11_Cirripectes_castaneus
+    156. KU7056_Cirripectes_castaneus
+    157. RS7740_Cirripectes_castaneus
+    158. ROT604_Cirripectes_castaneus
+    159. GBMIN121923_17_Cirripectes_castaneus
+    160. SAIAB1074_08_Cirripectes_castaneus
+    161. COLOR469_15_Cirripectes_castaneus
+    162. R0301_021_Cirripectes_stigmaticus
+    163. SBF724_11_Cirripectes_castaneus
+    164. REU189_1_Cirripectes_stigmaticus
+    165. PHILA1567_15_Cirripectes_castaneus
+    166. GBMIN131289_17_Cirripectes_castaneus
+    167. 1325_Cirripectes_castaneus
+    168. SAIAB024_06_Cirripectes_castaneus
+    169. SAIAB025_06_Cirripectes_castaneus
+ 
+Bipartitions included in the consensus tree
+ 
+    1234567891111111111222222222233333333334444444444555555555566666666667777777777888888888899999999991111111111111111111111111111111111111111111111111111111111111111111111
+             0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890000000000111111111122222222223333333333444444444455555555556666666666
+                                                                                                       0123456789012345678901234567890123456789012345678901234567890123456789
+    ************************************************************************************************************************************************************************* ( 1.0 )
+    --*********************************************************************************************************************************************************************** ( 1.0 )
+    --************************----------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --***********************------------------------------------------------------------------------------------------------------------------------------------------------ ( 0.99987 )
+    --********************--------------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --*****------------------------------------------------------------------------------------------------------------------------------------------------------------------ ( 1.0 )
+    --***-------------------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---**-------------------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -----**------------------------------------------------------------------------------------------------------------------------------------------------------------------ ( 0.99987 )
+    -------***************--------------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    -------*******----------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------******----------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------*****----------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ----------****----------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -----------***----------------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ------------**----------------------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------********--------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------------**--------------------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    ----------------******--------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ----------------***------------------------------------------------------------------------------------------------------------------------------------------------------ ( 1.0 )
+    -----------------**------------------------------------------------------------------------------------------------------------------------------------------------------ ( 0.99991 )
+    -------------------***--------------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------**--------------------------------------------------------------------------------------------------------------------------------------------------- ( 0.99997 )
+    ----------------------***------------------------------------------------------------------------------------------------------------------------------------------------ ( 0.99987 )
+    -----------------------**------------------------------------------------------------------------------------------------------------------------------------------------ ( 0.99987 )
+    --------------------------*********************************************************************************************************************************************** ( 1.0 )
+    --------------------------*********-------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------------**--------------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    ----------------------------*******-------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    ----------------------------****----------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    -----------------------------***----------------------------------------------------------------------------------------------------------------------------------------- ( 0.99997 )
+    ------------------------------**----------------------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------------------------------***-------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    ---------------------------------**-------------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    -----------------------------------************************************************************************************************************************************** ( 1.0 )
+    -----------------------------------*********************************************************************************----------------------------------------------------- ( 1.0 )
+    -----------------------------------***----------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    ------------------------------------**----------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------------------------******************************************************************************----------------------------------------------------- ( 1.0 )
+    --------------------------------------**********************************------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------------------------*********-------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------------------------**--------------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    ----------------------------------------*******-------------------------------------------------------------------------------------------------------------------------- ( 1.0 )
+    -----------------------------------------******-------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------*****-------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -------------------------------------------****-------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------------------------------------------***-------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------**-------------------------------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -----------------------------------------------*************************------------------------------------------------------------------------------------------------- ( 1.0 )
+    ------------------------------------------------************************------------------------------------------------------------------------------------------------- ( 1.0 )
+    -------------------------------------------------***********************------------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------------------------------------**********************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------*********************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ----------------------------------------------------********************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -----------------------------------------------------*******************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------------------******************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -------------------------------------------------------*****************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------------------------------------------------------****************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------***************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ----------------------------------------------------------**************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -----------------------------------------------------------*************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------------------------************------------------------------------------------------------------------------------------------- ( 0.99987 )
+    -------------------------------------------------------------***********------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------------------------------------------------------------**********------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------*********------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------*******--------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------****------------------------------------------------------------------------------------------------------ ( 0.99987 )
+    ---------------------------------------------------------------**-------------------------------------------------------------------------------------------------------- ( 0.99997 )
+    -----------------------------------------------------------------**------------------------------------------------------------------------------------------------------ ( 1.0 )
+    -------------------------------------------------------------------***--------------------------------------------------------------------------------------------------- ( 0.99987 )
+    --------------------------------------------------------------------**--------------------------------------------------------------------------------------------------- ( 0.99997 )
+    ----------------------------------------------------------------------**------------------------------------------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------------------------------------********************************************----------------------------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------***********************-------------------------------------------------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------*******------------------------------------------------------------------------------------------ ( 1.0 )
+    ------------------------------------------------------------------------****--------------------------------------------------------------------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------**----------------------------------------------------------------------------------------------- ( 1.0 )
+    --------------------------------------------------------------------------**--------------------------------------------------------------------------------------------- ( 1.0 )
+    ----------------------------------------------------------------------------***------------------------------------------------------------------------------------------ ( 0.99987 )
+    -----------------------------------------------------------------------------**------------------------------------------------------------------------------------------ ( 1.0 )
+    -------------------------------------------------------------------------------****************-------------------------------------------------------------------------- ( 1.0 )
+    --------------------------------------------------------------------------------***************-------------------------------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------**************-------------------------------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------******---------------------------------------------------------------------------------- ( 0.99987 )
+    ----------------------------------------------------------------------------------*****---------------------------------------------------------------------------------- ( 0.99987 )
+    -----------------------------------------------------------------------------------****---------------------------------------------------------------------------------- ( 1.0 )
+    -----------------------------------------------------------------------------------**------------------------------------------------------------------------------------ ( 1.0 )
+    -------------------------------------------------------------------------------------**---------------------------------------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------********-------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------------------------------******---------------------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------------------------------**-------------------------------------------------------------------------------- ( 1.0 )
+    -----------------------------------------------------------------------------------------****---------------------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------------------------------------------------------***---------------------------------------------------------------------------- ( 0.99987 )
+    -------------------------------------------------------------------------------------------**---------------------------------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------------**-------------------------------------------------------------------------- ( 1.0 )
+    -----------------------------------------------------------------------------------------------*********************----------------------------------------------------- ( 1.0 )
+    -----------------------------------------------------------------------------------------------*********----------------------------------------------------------------- ( 1.0 )
+    -----------------------------------------------------------------------------------------------**------------------------------------------------------------------------ ( 0.99987 )
+    -------------------------------------------------------------------------------------------------*******----------------------------------------------------------------- ( 0.99987 )
+    -------------------------------------------------------------------------------------------------**---------------------------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------------------*****----------------------------------------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------------------------------------------**-------------------------------------------------------------------- ( 0.99987 )
+    -----------------------------------------------------------------------------------------------------***----------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------------------------------------------------------------------**----------------------------------------------------------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------************----------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------------------------***********----------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------------------------***------------------------------------------------------------- ( 1.0 )
+    ----------------------------------------------------------------------------------------------------------**------------------------------------------------------------- ( 0.99987 )
+    ------------------------------------------------------------------------------------------------------------********----------------------------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------**----------------------------------------------------------- ( 0.99997 )
+    --------------------------------------------------------------------------------------------------------------******----------------------------------------------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------***-------------------------------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------------------------------**-------------------------------------------------------- ( 0.99991 )
+    -----------------------------------------------------------------------------------------------------------------***----------------------------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------------**----------------------------------------------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------------***************************************************** ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------------**************************--------------------------- ( 0.99991 )
+    --------------------------------------------------------------------------------------------------------------------*********************-------------------------------- ( 1.0 )
+    ---------------------------------------------------------------------------------------------------------------------********************-------------------------------- ( 1.0 )
+    ----------------------------------------------------------------------------------------------------------------------*******************-------------------------------- ( 0.99987 )
+    -----------------------------------------------------------------------------------------------------------------------******************-------------------------------- ( 0.99991 )
+    -----------------------------------------------------------------------------------------------------------------------**------------------------------------------------ ( 1.0 )
+    -------------------------------------------------------------------------------------------------------------------------****************-------------------------------- ( 0.99991 )
+    -------------------------------------------------------------------------------------------------------------------------**************---------------------------------- ( 0.99987 )
+    --------------------------------------------------------------------------------------------------------------------------*************---------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------------------------------------------------------------------************---------------------------------- ( 0.99987 )
+    ----------------------------------------------------------------------------------------------------------------------------***********---------------------------------- ( 0.99991 )
+    ----------------------------------------------------------------------------------------------------------------------------*******-------------------------------------- ( 0.99987 )
+    ----------------------------------------------------------------------------------------------------------------------------**------------------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------------------------*****-------------------------------------- ( 0.99987 )
+    -------------------------------------------------------------------------------------------------------------------------------****-------------------------------------- ( 1.0 )
+    -------------------------------------------------------------------------------------------------------------------------------***--------------------------------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------------------------**--------------------------------------- ( 0.99987 )
+    -----------------------------------------------------------------------------------------------------------------------------------****---------------------------------- ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------------------------------***---------------------------------- ( 1.0 )
+    -------------------------------------------------------------------------------------------------------------------------------------**---------------------------------- ( 0.99987 )
+    ---------------------------------------------------------------------------------------------------------------------------------------**-------------------------------- ( 0.99987 )
+    -----------------------------------------------------------------------------------------------------------------------------------------*****--------------------------- ( 0.99991 )
+    -----------------------------------------------------------------------------------------------------------------------------------------**------------------------------ ( 0.99987 )
+    -------------------------------------------------------------------------------------------------------------------------------------------***--------------------------- ( 0.99991 )
+    -------------------------------------------------------------------------------------------------------------------------------------------**---------------------------- ( 1.0 )
+    ----------------------------------------------------------------------------------------------------------------------------------------------*************************** ( 1.0 )
+    -----------------------------------------------------------------------------------------------------------------------------------------------************************** ( 0.99997 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------************************* ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------**----------------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------------------------------------------*********************** ( 0.99987 )
+    ---------------------------------------------------------------------------------------------------------------------------------------------------********************** ( 0.99991 )
+    ----------------------------------------------------------------------------------------------------------------------------------------------------********************* ( 0.99991 )
+    ----------------------------------------------------------------------------------------------------------------------------------------------------**------------------- ( 0.99991 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------------******************* ( 0.99997 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------------**----------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------------------------------------------------***************** ( 0.99987 )
+    --------------------------------------------------------------------------------------------------------------------------------------------------------****------------- ( 1.0 )
+    --------------------------------------------------------------------------------------------------------------------------------------------------------**--------------- ( 1.0 )
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------**------------- ( 0.99987 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------************* ( 0.99987 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------********----- ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------***---------- ( 1.0 )
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------**---------- ( 0.99991 )
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------*****----- ( 0.99997 )
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------****----- ( 0.99987 )
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------**------- ( 1.0 )
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------**----- ( 0.99997 )
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------------***** ( 0.99987 )
+    --------------------------------------------------------------------------------------------------------------------------------------------------------------------***-- ( 0.99987 )
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------**-- ( 1.0 )
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------** ( 0.99997 )
+
+ 
+                                      +-169 KUT_4023_Cirripectes_stigmaticus
+                                  +-329
+                                  |   +-168 UKFBI528_08_Cirripectes_stigmaticus
+                              +-330
+                              |   |       +-167 KUT_687_Cirripectes_stigmaticus
+                              |   |   +-327
+                              |   |   |   +-166 UKFBK089_08_Cirripectes_stigmaticus
+                              |   +-328
+                              |       +------------------------------------165 Pta_BLN0831
+                          +-331
+                          |   |                                                       +-164 MARQ_074_Cirripectes_variolosus
+                          |   |                                                   +-313
+                          |   |                                                   |   +-163 Crv_024_Cirripectes_variolosus
+                          |   |                                               +-314
+                          |   |                                               |   +-162 MARQ_071_Cirripectes_variolosus
+                          |   |                                           +-315
+                          |   |                                           |   +-161 MARQ_073_Cirripectes_variolosus
+                          |   |                                       +-316
+                          |   |                                       |   +-160 GAM_145_Cirripectes_variolosus
+                          |   |                                   +-317
+                          |   |                                   |   |   +-159 GAM_144_Cirripectes_variolosus
+                          |   |                                   |   +-312
+                          |   |                                   |       +-158 AUSTR052_13_Cirripectes_variolosus
+                          |   |                               +-318
+                          |   |                               |   |           +-157 MBIO3074_Cirripectes_variolosus
+                          |   |                               |   |       +-309
+                          |   |                               |   |       |   +-156 MBFA186_07_Cirripectes_variolosus
+                          |   |                               |   |   +-310
+                          |   |                               |   |   |   +-155 GAM_143_Cirripectes_variolosus
+                          |   |                               |   +-311
+                          |   |                               |       +-154 AUST_164_Cirripectes_variolosus
+                          |   |                           +-319
+                          |   |                           |   +-153 MBFA187_07_Cirripectes_variolosus
+                          |   |                       +-320
+                          |   |                       |   +-152 GAM_793_Cirripectes_variolosus
+                          |   |                   +-321
+                          |   |                   |   +-151 MBIO3084_Cirripectes_variolosus
+                          |   |               +-322
+                          |   |               |   |   +-150 GAM_794_Cirripectes_variolosus
+                          |   |               |   +-308
+                          |   |               |       +-149 AUST_162_Cirripectes_variolosus
+                          |   |           +-323
+                          |   |           |   |   +-148 FLMOO_1106_Cirripectes_variolosus
+                          |   |           |   +-307
+                          |   |           |       +-147 FPFLB356_12_Cirripectes_variolosus
+                          |   |       +-324
+                          |   |       |   +-146 Crv_026_Cirripectes_variolosus
+                          |   |   +-325
+                          |   |   |   +-145 AUST_056_Cirripectes_variolosus
+                          |   +-326
+                          |       +-144 AUST_163_Cirripectes_variolosus
+                      +-332
+                      |   |                           +-143 UG0610_Cirripectes_stigmaticus
+                      |   |                       +-300
+                      |   |                       |   +-142 LIFS795_08_Cirripectes_castaneus
+                      |   |                   +-301
+                      |   |                   |   |                       +-141 1325_Cirripectes_castaneus
+                      |   |                   |   |                   +-294
+                      |   |                   |   |                   |   +-140 GBMIN131289_17_Cirripectes_castaneus
+                      |   |                   |   |               +-295
+                      |   |                   |   |               |   +-139 PHILA1567_15_Cirripectes_castaneus
+                      |   |                   |   |           +-296
+                      |   |                   |   |           |   |   +-138 SAIAB025_06_Cirripectes_castaneus
+                      |   |                   |   |           |   +-293
+                      |   |                   |   |           |       +-137 SAIAB024_06_Cirripectes_castaneus
+                      |   |                   |   |       +-297
+                      |   |                   |   |       |   |               +-136 REU189_1_Cirripectes_stigmaticus
+                      |   |                   |   |       |   |           +-289
+                      |   |                   |   |       |   |           |   +-135 SBF724_11_Cirripectes_castaneus
+                      |   |                   |   |       |   |       +-290
+                      |   |                   |   |       |   |       |   |   +-134 R0301_021_Cirripectes_stigmaticus
+                      |   |                   |   |       |   |       |   +-288
+                      |   |                   |   |       |   |       |       +-133 COLOR469_15_Cirripectes_castaneus
+                      |   |                   |   |       |   |   +-291
+                      |   |                   |   |       |   |   |   +-132 SAIAB1074_08_Cirripectes_castaneus
+                      |   |                   |   |       |   +-292
+                      |   |                   |   |       |       |       +-131 GBMIN121923_17_Cirripectes_castaneus
+                      |   |                   |   |       |       |   +-286
+                      |   |                   |   |       |       |   |   +-130 ROT604_Cirripectes_castaneus
+                      |   |                   |   |       |       +-287
+                      |   |                   |   |       |           +-129 RS7740_Cirripectes_castaneus
+                      |   |                   |   |   +-298
+                      |   |                   |   |   |   |       +-128 KU7056_Cirripectes_castaneus
+                      |   |                   |   |   |   |   +-284
+                      |   |                   |   |   |   |   |   +-127 RESIC180_11_Cirripectes_castaneus
+                      |   |                   |   |   |   +-285
+                      |   |                   |   |   |       |   +-126 REU189_2_Cirripectes_stigmaticus
+                      |   |                   |   |   |       +-283
+                      |   |                   |   |   |           +-125 SBF725_11_Cirripectes_castaneus
+                      |   |                   |   +-299
+                      |   |                   |       |   +-124 UG0608_Cirripectes_stigmaticus
+                      |   |                   |       +-282
+                      |   |                   |           +-123 LIFS793_08_Cirripectes_castaneus
+                      |   |               +-302
+                      |   |               |   +-122 LIFS794_08_Cirripectes_castaneus
+                      |   |           +-303
+                      |   |           |   +-121 UG0609_Cirripectes_stigmaticus
+                      |   |       +-304
+                      |   |       |   |   +-120 REU1013_Cirripectes_stigmaticus
+                      |   |       |   +-281
+                      |   |       |       +-119 SBF598_11_Cirripectes_castaneus
+                      |   |   +-305
+                      |   |   |   +-118 REU2559_Cirripectes_stigmaticus
+                      |   +-306
+                      |       +-117 SBF752_11_Cirripectes_castaneus
+             +------333
+             |        |                               +-116 1758_Cirripectes_filamentosus
+             |        |                           +-273
+             |        |                           |   +-115 GBMIN96357_17_Cirripectes_filamentosus
+             |        |                       +-274
+             |        |                       |   |           +-114 ROT134_Cirripectes_filamentosus_2
+             |        |                       |   |       +-270
+             |        |                       |   |       |   +-113 ROT134_Cirripectes_filamentosus
+             |        |                       |   |   +-271
+             |        |                       |   |   |   +-112 SAIAB026_06_Cirripectes_filamentosus
+             |        |                       |   +-272
+             |        |                       |       |       +-111 1656_Cirripectes_perustus
+             |        |                       |       |   +-268
+             |        |                       |       |   |   +-110 KU6917_Cirripectes_filamentosus
+             |        |                       |       +-269
+             |        |                       |           +-109 SAIAB187_06_Cirripectes_filamentosus
+             |        |                   +-275
+             |        |                   |   |       +-108 PHILV074_15_Cirripectes_filamentosus
+             |        |                   |   |   +-266
+             |        |                   |   |   |   +-107 GBMIN95957_17_Cirripectes_filamentosus
+             |        |                   |   +-267
+             |        |                   |       +-106 PHILA2321_18_Cirripectes_filamentosus
+             |        |               +-276
+             |        |               |   +-105 RESIC057_11_Cirripectes_chelomatus
+             |        |           +-277
+             |        |           |   |        +-104 SAIAB83881_Cirripectes_heemstraorum
+             |        |           |   |    +-264
+             |        |           |   |    |   +-103 ADC11_2358_1_Cirripectes_auritus
+             |        |           |   +--265
+             |        |           |        |           +-102 DSFSG709_11_Cirripectes_auritus
+             |        |           |        |       +-261
+             |        |           |        |       |   +-101 ANGBF9244_12_Cirripectes_auritus
+             |        |           |        |   +-262
+             |        |           |        |   |   |       +-100 ADC_2358_2_Cirripectes_auritus
+             |        |           |        |   |   |   +-259
+             |        |           |        |   |   |   |   +--99 DSFSG737_11_Cirripectes_auritus
+             |        |           |        |   |   +-260
+             |        |           |        |   |       +--98 ADC12_2359A_1_Cirripectes_heemstraorum
+             |        |           |        +-263
+             |        |           |            |   +--97 SAIAB83624_Cirripectes_heemstraorum
+             |        |           |            +-258
+             |        |           |                +--96 ANGBF9231_12_Cirripectes_auritus
+             |        |       +-278
+             |        |       |   |                                +--95 R0101_131_Cirripectes_castaneus
+             |        |       |   |                            +-250
+             |        |       |   |                            |   +--94 COLOR408_15_Cirripectes_cf_randalli
+             |        |       |   |                        +-251
+             |        |       |   |                        |   |   +--93 REU2554_Cirripectes_castaneus
+             |        |       |   |                        |   +-249
+             |        |       |   |                        |       +--92 SBF750_11_Cirripectes_cf_randalli
+             |        |       |   |                    +-252
+             |        |       |   |                    |   +--91 SBF680_11_Cirripectes_cf_randalli
+             |        |       |   |                +-253
+             |        |       |   |                |   +--90 COLOR413_15_Cirripectes_cf_randalli
+             |        |       |   |            +-254
+             |        |       |   |            |   |                   +--89 REU0146_Cirripectes_castaneus
+             |        |       |   |            |   |               +-244
+             |        |       |   |            |   |               |   +--88 SBF493_11_Cirripectes_cf_randalli
+             |        |       |   |            |   |           +-245
+             |        |       |   |            |   |           |   +--87 R0101_171_Cirripectes_castaneus
+             |        |       |   |            |   |       +-246
+             |        |       |   |            |   |       |   +--86 REU1763_Cirripectes_castaneus
+             |        |       |   |            |   |   +-247
+             |        |       |   |            |   |   |   |   +--85 REU2555_Cirripectes_castaneus
+             |        |       |   |            |   |   |   +-243
+             |        |       |   |            |   |   |       +--84 SBF751_11_Cirripectes_cf_randalli
+             |        |       |   |            |   +-248
+             |        |       |   |            |       |   +--83 REU1843_Cirripectes_castaneus
+             |        |       |   |            |       +-242
+             |        |       |   |            |           +--82 SBF706_11_Cirripectes_cf_randalli
+             |        |       |   |        +-255
+             |        |       |   |        |   +--81 SBF707_11_Cirripectes_cf_randalli
+             |        |       |   |   +--256
+             |        |       |   |   |    +--80 REU1844_Cirripectes_castaneus
+             |        |       |   +-257
+             |        |       |       |           +--79 AUST_397_Cirripectes_fuscoguttatus
+             |        |       |       |       +-239
+             |        |       |       |       |   +--78 AUSTR155_13_Cirripectes_fuscoguttatus
+             |        |       |       |   +-240
+             |        |       |       |   |   +--77 AUST_156_Cirripectes_fuscoguttatus
+             |        |       |       +-241
+             |        |       |           |       +--76 MBIO17154_Cirripectes_fuscoguttatus
+             |        |       |           |   +-237
+             |        |       |           |   |   +--75 MBFA979_07_Cirripectes_fuscoguttatus
+             |        |       |           +-238
+             |        |       |               |   +--74 MBIO17144_Cirripectes_fuscoguttatus
+             |        |       |               +-236
+             |        |       |                   +--73 MBFA978_07_Cirripectes_fuscoguttatus
+             |        |   +-279
+             |        |   |   |                               +--72 Csg_005_Cirripectes_matatakaro_sp_nov
+             |        |   |   |                           +-228
+             |        |   |   |                           |   +--71 Crv_006_Cirripectes_matatakaro_sp_nov
+             |        |   |   |                       +-229
+             |        |   |   |                       |   +--70 Csg_004_Cirripectes_matatakaro_sp_nov
+             |        |   |   |                   +-230
+             |        |   |   |                   |   +--69 Crv_004_Cirripectes_matatakaro_sp_nov
+             |        |   |   |               +-231
+             |        |   |   |               |   +--68 MARQ139_12_Cirripectes_matatakaro_sp_nov
+             |        |   |   |           +-232
+             |        |   |   |           |   +--67 AUSTR240_13_Cirripectes_matatakaro_sp_nov
+             |        |   |   |       +-233
+             |        |   |   |       |   +--66 MHCV006_Cirripectes_sp_nov
+             |        |   |   |   +-234
+             |        |   |   |   |   |   +--65 GAMBA024_12_Cirripectes_matatakaro_sp_nov
+             |        |   |   |   |   +-227
+             |        |   |   |   |       +--64 GAMBA023_12_Cirripectes_matatakaro_sp_nov
+             |        |   |   +-235
+             |        |   |       |                                                                               +--63 FLHI464_12_Cirripectes_vanderbilti
+             |        |   |       |                                                                           +-207
+             |        |   |       |                                                                           |   +--62 FLHI242_08_Cirripectes_vanderbilti
+             |        |   |       |                                                                       +-208
+             |        |   |       |                                                                       |   |   +--61 FLHI436_12_Cirripectes_vanderbilti
+             |        |   |       |                                                                       |   +-206
+             |        |   |       |                                                                       |       +--60 FLHI432_12_Cirripectes_vanderbilti
+             |        |   |       |                                                                   +-209
+             |        |   |       |                                                                   |   |       +--59 FLHI635_12_Cirripectes_vanderbilti
+             |        |   |       |                                                                   |   |   +-204
+             |        |   |       |                                                                   |   |   |   +--58 FLHI447_12_Cirripectes_vanderbilti
+             |        |   |       |                                                                   |   +-205
+             |        |   |       |                                                                   |       +--57 FLHI428_12_Cirripectes_vanderbilti
+             |        |   |       |                                                               +-210
+             |        |   |       |                                                               |   |   +--56 FLHI829_14_Cirripectes_vanderbilti
+             |        |   |       |                                                               |   +-203
+             |        |   |       |                                                               |       +--55 FLHI376_09_Cirripectes_vanderbilti
+             |        |   |       |                                                           +-211
+             |        |   |       |                                                           |   +--54 FLHI1126_14_Cirripectes_vanderbilti
+             |        |   |       |                                                       +-212
+             |        |   |       |                                                       |   +--53 Cvd_077_Cirripectes_vanderbilti
+             |        |   |       |                                                   +-213
+             |        |   |       |                                                   |   +--52 Cvd_043_Cirripectes_vanderbilti
+             |        |   |       |                                               +-214
+             |        |   |       |                                               |   +--51 Cvd_061_Cirripectes_vanderbilti
+             |        |   |       |                                           +-215
+             |        |   |       |                                           |   +--50 FLHI262_08_Cirripectes_vanderbilti
+             |        |   |       |                                       +-216
+             |        |   |       |                                       |   +--49 Cvd_062_Cirripectes_vanderbilti
+             |        |   |       |                                   +-217
+             |        |   |       |                                   |   +--48 FLHI511_12_Cirripectes_vanderbilti
+             |        |   |       |                               +-218
+             |        |   |       |                               |   +--47 FLHI454_12_Cirripectes_vanderbilti
+             |        |   |       |                           +-219
+             |        |   |       |                           |   +--46 FLHI463_12_Cirripectes_vanderbilti
+             |        |   |       |                       +-220
+             |        |   |       |                       |   +--45 MHCV005_Cirripectes_vanderbilti
+             |        |   |       |                   +-221
+             |        |   |       |                   |   +--44 MHCV001_Cirripectes_vanderbilti
+             |        |   |       |               +-222
+             |        |   |       |               |   +--43 FLHI247_08_Cirripectes_vanderbilti
+             |        |   |       |           +-223
+             |        |   |       |           |   +--42 FLHI895_14_Cirripectes_vanderbilti
+             |        |   |       |       +-224
+             |        |   |       |       |   +--41 MHCV003_Cirripectes_vanderbilti
+             |        |   |       |   +-225
+             |        |   |       |   |   +--40 Cvd_081_Cirripectes_vanderbilti
+             |        |   |       +-226
+             |        |   |           +--39 FLHI456_12_Cirripectes_vanderbilti
+             |        +-280
+             |            |       +--38 PHILA1568_15_Cirripectes_polyzona
+             |            |   +-201
+             |            |   |   +--37 UKFBJ563_08_Cirripectes_polyzona
+             |            +-202
+             |                +--36 KU4315_Cirripectes_polyzona
+         +-334
+         |   |                +--35 FLHI855_14_Cirripectes_cf_obscurus
+         |   |            +-197
+         |   |            |   +--34 FLHI849_14_Cirripectes_obscurus
+         |   |        +-198
+         |   |        |   +--33 AUST_546_Cirripectes_obscurus
+         |   |    +-199
+         |   |    |   |           +--32 GAM_508_Cirripectes_alboapicalis
+         |   |    |   |       +-194
+         |   |    |   |       |   +--31 GAM_511_Cirripectes_alboapicalis
+         |   |    |   |   +-195
+         |   |    |   |   |   +--30 AUSTR398_13_Cirripectes_alboapicalis
+         |   |    |   +-196
+         |   |    |       +--29 AUST_550_Cirripectes_alboapicalis
+         |   +--200
+         |        |   +--28 DRRA1746_12_Cirripectes_patuki
+         |        +-193
+         |            +--27 DRRA1725_12_Cirripectes_patuki
++------335
+|        |                 +--26 FLHI420_09_Cirripectes_lineopunctatus
+|        |             +-189
+|        |             |   +--25 FLHI377_09_Cirripectes_lineopunctatus
+|        |         +-190
+|        |         |   +--24 FLHI781_14_Cirripectes_lineopunctatus
+|        |     +-191
+|        |     |   |           +--23 KU800_Cirripectes_quagga
+|        |     |   |       +-186
+|        |     |   |       |   +--22 UKFBI168_08_Cirripectes_quagga
+|        |     |   |   +-187
+|        |     |   |   |   |       +--21 KUT_800_Cirripectes_quagga
+|        |     |   |   |   |   +-184
+|        |     |   |   |   |   |   +--20 AUST_165_Cirripectes_quagga
+|        |     |   |   |   +-185
+|        |     |   |   |       +--19 AUSTR533_13_Cirripectes_quagga
+|        |     |   +-188
+|        |     |       |                           +--18 FLMOO_998_Cirripectes_quagga
+|        |     |       |                       +-177
+|        |     |       |                       |   +--17 FPFLB304_12_Cirripectes_quagga
+|        |     |       |                   +-178
+|        |     |       |                   |   +--16 AUSTR401_13_Cirripectes_quagga
+|        |     |       |               +-179
+|        |     |       |               |   +--15 MBFA179_07_Cirripectes_quagga
+|        |     |       |           +-180
+|        |     |       |           |   +--14 GAM_99_Cirripectes_quagga
+|        |     |       |       +-181
+|        |     |       |       |   +--13 GAM_109_Cirripectes_quagga
+|        |     |       |   +-182
+|        |     |       |   |   +--12 MBIO2924_Cirripectes_quagga
+|        |     |       +-183
+|        |     |           |               +--11 AUST_402_Cirripectes_quagga
+|        |     |           |           +-173
+|        |     |           |           |   +--10 MBFA178_07_Cirripectes_quagga
+|        |     |           |       +-174
+|        |     |           |       |   +---9 MBIO2914_Cirripectes_quagga
+|        |     |           |   +-175
+|        |     |           |   |   |       +---8 FLMOO_1124_Cirripectes_quagga
+|        |     |           |   |   |   +-171
+|        |     |           |   |   |   |   +---7 FPFLB369_12_Cirripectes_quagga
+|        |     |           |   |   +-172
+|        |     |           |   |       +---6 AUST_168_Cirripectes_quagga
+|        |     |           +-176
+|        |     |               |   +---5 FLMOO_1013_Cirripectes_quagga
+|        |     |               +-170
+|        |     |                   +---4 FPFLB317_12_Cirripectes_quagga
+|        +---192
+|              +---3 FLHI827_14_Cirripectes_lineopunctatus
+|
++---2 AUST_547_Cirripectes_jenningsi
+|
++---1 AUSTR546_13_Cirripectes_jenningsi
+
+ 
+(AUSTR546_13_Cirripectes_jenningsi:0.0131203200,AUST_547_Cirripectes_jenningsi:0.0000002000,((FLHI827_14_Cirripectes_lineopunctatus:0.0000002900,(((((FPFLB317_12_Cirripectes_quagga:0.0000000500,FLMOO_1013_Cirripectes_quagga:0.0000000000):1.0000:0.0015938700,((AUST_168_Cirripectes_quagga:0.0000000000,(FPFLB369_12_Cirripectes_quagga:0.0000000500,FLMOO_1124_Cirripectes_quagga:0.0000000000):0.9999:0.0000001300):1.0000:0.0032065900,(MBIO2914_Cirripectes_quagga:0.0000000000,(MBFA178_07_Cirripectes_quagga:0.0000001200,AUST_402_Cirripectes_quagga:0.0000000000):1.0000:0.0000000500):1.0000:0.0015967000):0.9999:0.0000000700):0.9999:0.0000000700,(MBIO2924_Cirripectes_quagga:0.0000000000,(GAM_109_Cirripectes_quagga:0.0015938200,(GAM_99_Cirripectes_quagga:0.0000000000,(MBFA179_07_Cirripectes_quagga:0.0000000000,(AUSTR401_13_Cirripectes_quagga:0.0000000600,(FPFLB304_12_Cirripectes_quagga:0.0000000500,FLMOO_998_Cirripectes_quagga:0.0000000000):1.0000:0.0015936600):0.9999:0.0000000600):0.9999:0.0000001200):0.9999:0.0000000600):0.9999:0.0000001100):0.9999:0.0000000600):1.0000:0.0015847700,((AUSTR533_13_Cirripectes_quagga:0.0016536400,(AUST_165_Cirripectes_quagga:0.0000000000,KUT_800_Cirripectes_quagga:0.0000000500):0.9999:0.0000000700):0.9999:0.0000000000,(UKFBI168_08_Cirripectes_quagga:0.0000000000,KU800_Cirripectes_quagga:0.0018416500):0.9999:0.0000000000):1.0000:0.0016147900):1.0000:0.0066049200,(FLHI781_14_Cirripectes_lineopunctatus:0.0016693500,(FLHI377_09_Cirripectes_lineopunctatus:0.0000000000,FLHI420_09_Cirripectes_lineopunctatus:0.0000000400):0.9999:0.0000000600):0.9999:0.0000000600):0.9999:0.0016140100):1.0000:0.0895738900,(((DRRA1725_12_Cirripectes_patuki:0.0030943900,DRRA1746_12_Cirripectes_patuki:0.0000000000):1.0000:0.0376244100,((AUST_550_Cirripectes_alboapicalis:0.0015362100,(AUSTR398_13_Cirripectes_alboapicalis:0.0000000000,(GAM_511_Cirripectes_alboapicalis:0.0000001100,GAM_508_Cirripectes_alboapicalis:0.0015370400):0.9999:0.0000000900):1.0000:0.0000001000):1.0000:0.0617797100,(AUST_546_Cirripectes_obscurus:0.0014972300,(FLHI849_14_Cirripectes_obscurus:0.0000000000,FLHI855_14_Cirripectes_cf_obscurus:0.0000001200):1.0000:0.0017790600):1.0000:0.0249771300):1.0000:0.0272130500):1.0000:0.0711079400,(((KU4315_Cirripectes_polyzona:0.0000000700,(UKFBJ563_08_Cirripectes_polyzona:0.0000001300,PHILA1568_15_Cirripectes_polyzona:0.0097244700):1.0000:0.0017217800):1.0000:0.0533658600,(((FLHI456_12_Cirripectes_vanderbilti:0.0036684600,(Cvd_081_Cirripectes_vanderbilti:0.0000000600,(MHCV003_Cirripectes_vanderbilti:0.0047869200,(FLHI895_14_Cirripectes_vanderbilti:0.0016146700,(FLHI247_08_Cirripectes_vanderbilti:0.0000000000,(MHCV001_Cirripectes_vanderbilti:0.0000000000,(MHCV005_Cirripectes_vanderbilti:0.0031483800,(FLHI463_12_Cirripectes_vanderbilti:0.0032401200,(FLHI454_12_Cirripectes_vanderbilti:0.0000000000,(FLHI511_12_Cirripectes_vanderbilti:0.0000000000,(Cvd_062_Cirripectes_vanderbilti:0.0032469200,(FLHI262_08_Cirripectes_vanderbilti:0.0016034300,(Cvd_061_Cirripectes_vanderbilti:0.0016180400,(Cvd_043_Cirripectes_vanderbilti:0.0016180100,(Cvd_077_Cirripectes_vanderbilti:0.0016165300,(FLHI1126_14_Cirripectes_vanderbilti:0.0000000000,((FLHI376_09_Cirripectes_vanderbilti:0.0000000600,FLHI829_14_Cirripectes_vanderbilti:0.0000000000):0.9999:0.0016037500,((FLHI428_12_Cirripectes_vanderbilti:0.0000000000,(FLHI447_12_Cirripectes_vanderbilti:0.0000035800,FLHI635_12_Cirripectes_vanderbilti:0.0017470400):1.0000:0.0000034400):0.9999:0.0032296800,((FLHI432_12_Cirripectes_vanderbilti:0.0000004800,FLHI436_12_Cirripectes_vanderbilti:0.0044798900):1.0000:0.0021374500,(FLHI242_08_Cirripectes_vanderbilti:0.0017911300,FLHI464_12_Cirripectes_vanderbilti:0.0054521000):1.0000:0.0000002600):0.9999:0.0000001100):0.9999:0.0000000600):0.9999:0.0000000500):0.9999:0.0000000500):0.9999:0.0000001200):0.9999:0.0000001200):0.9999:0.0000001100):0.9999:0.0000001200):0.9999:0.0000001100):0.9999:0.0000000600):0.9999:0.0000000600):0.9999:0.0000000600):0.9999:0.0000000500):0.9999:0.0000000600):0.9999:0.0000000600):0.9999:0.0000000600):1.0000:0.0015678800):1.0000:0.0013297900):1.0000:0.0242177800,((GAMBA023_12_Cirripectes_matatakaro_sp_nov:0.0015722400,GAMBA024_12_Cirripectes_matatakaro_sp_nov:0.0000001300):1.0000:0.0123471100,(MHCV006_Cirripectes_sp_nov:0.0015941600,(AUSTR240_13_Cirripectes_matatakaro_sp_nov:0.0015910500,(MARQ139_12_Cirripectes_matatakaro_sp_nov:0.0000000000,(Crv_004_Cirripectes_matatakaro_sp_nov:0.0019728200,(Csg_004_Cirripectes_matatakaro_sp_nov:0.0019770700,(Crv_006_Cirripectes_matatakaro_sp_nov:0.0000000000,Csg_005_Cirripectes_matatakaro_sp_nov:0.0040075600):0.9999:0.0000000600):0.9999:0.0000000800):0.9999:0.0000000600):0.9999:0.0000001200):0.9999:0.0000000600):1.0000:0.0024757300):1.0000:0.0145786700):1.0000:0.0337186300,(((((MBFA978_07_Cirripectes_fuscoguttatus:0.0000001100,MBIO17144_Cirripectes_fuscoguttatus:0.0000000000):1.0000:0.0033501900,(MBFA979_07_Cirripectes_fuscoguttatus:0.0000001100,MBIO17154_Cirripectes_fuscoguttatus:0.0000000000):1.0000:0.0029277000):1.0000:0.0032095600,(AUST_156_Cirripectes_fuscoguttatus:0.0028840500,(AUSTR155_13_Cirripectes_fuscoguttatus:0.0000001200,AUST_397_Cirripectes_fuscoguttatus:0.0000000000):1.0000:0.0017926600):0.9999:0.0000000600):1.0000:0.0608903600,(REU1844_Cirripectes_castaneus:0.0000000000,(SBF707_11_Cirripectes_cf_randalli:0.0000000300,(((SBF706_11_Cirripectes_cf_randalli:0.0000001200,REU1843_Cirripectes_castaneus:0.0000000000):1.0000:0.0016002200,((SBF751_11_Cirripectes_cf_randalli:0.0000001200,REU2555_Cirripectes_castaneus:0.0000000000):1.0000:0.0031597700,(REU1763_Cirripectes_castaneus:0.0000000000,(R0101_171_Cirripectes_castaneus:0.0000000000,(SBF493_11_Cirripectes_cf_randalli:0.0000001200,REU0146_Cirripectes_castaneus:0.0000000000):1.0000:0.0016036900):0.9999:0.0000001100):0.9999:0.0000001300):0.9999:0.0000001200):0.9999:0.0000001200,(COLOR413_15_Cirripectes_cf_randalli:0.0000000600,(SBF680_11_Cirripectes_cf_randalli:0.0000000600,((SBF750_11_Cirripectes_cf_randalli:0.0000001200,REU2554_Cirripectes_castaneus:0.0000000000):1.0000:0.0047774500,(COLOR408_15_Cirripectes_cf_randalli:0.0000001200,R0101_131_Cirripectes_castaneus:0.0000000000):1.0000:0.0016252000):1.0000:0.0015809500):0.9999:0.0000000800):0.9999:0.0000001000):1.0000:0.0015666700):1.0000:0.0000001200):1.0000:0.0754959800):1.0000:0.0129275900,((((ANGBF9231_12_Cirripectes_auritus:0.0000001200,SAIAB83624_Cirripectes_heemstraorum:0.0000000000):1.0000:0.0015830300,((ADC12_2359A_1_Cirripectes_heemstraorum:0.0015850100,(DSFSG737_11_Cirripectes_auritus:0.0000001200,ADC_2358_2_Cirripectes_auritus:0.0000000000):1.0000:0.0015841500):0.9999:0.0000000900,(ANGBF9244_12_Cirripectes_auritus:0.0000000000,DSFSG709_11_Cirripectes_auritus:0.0000000600):0.9999:0.0000000600):0.9999:0.0000001200):0.9999:0.0000001100,(ADC11_2358_1_Cirripectes_auritus:0.0000000600,SAIAB83881_Cirripectes_heemstraorum:0.0000000000):0.9999:0.0000001100):1.0000:0.0770364700,(RESIC057_11_Cirripectes_chelomatus:0.0081314700,((PHILA2321_18_Cirripectes_filamentosus:0.0032857900,(GBMIN95957_17_Cirripectes_filamentosus:0.0018894000,PHILV074_15_Cirripectes_filamentosus:0.0000001300):0.9999:0.0000000600):1.0000:0.0016470500,(((SAIAB187_06_Cirripectes_filamentosus:0.0000000000,(KU6917_Cirripectes_filamentosus:0.0055765400,1656_Cirripectes_perustus:0.0000000300):0.9999:0.0000000300):1.0000:0.0015601300,(SAIAB026_06_Cirripectes_filamentosus:0.0046644900,(ROT134_Cirripectes_filamentosus:0.0000000000,ROT134_Cirripectes_filamentosus_2:0.0000000600):1.0000:0.0039686400):1.0000:0.0022209800):1.0000:0.0016597900,(GBMIN96357_17_Cirripectes_filamentosus:0.0000001100,1758_Cirripectes_filamentosus:0.0000000000):1.0000:0.0000000800):1.0000:0.0032577500):1.0000:0.0240574200):1.0000:0.0505327500):1.0000:0.0158918300):1.0000:0.0057988200):1.0000:0.0072129200):1.0000:0.0197229400,((SBF752_11_Cirripectes_castaneus:0.0000000600,(REU2559_Cirripectes_stigmaticus:0.0000000000,((SBF598_11_Cirripectes_castaneus:0.0000000600,REU1013_Cirripectes_stigmaticus:0.0000000000):1.0000:0.0048508900,(UG0609_Cirripectes_stigmaticus:0.0000000600,(LIFS794_08_Cirripectes_castaneus:0.0000001300,(((LIFS793_08_Cirripectes_castaneus:0.0000000000,UG0608_Cirripectes_stigmaticus:0.0000000600):1.0000:0.0015680900,(((SBF725_11_Cirripectes_castaneus:0.0000000600,REU189_2_Cirripectes_stigmaticus:0.0000000000):1.0000:0.0016016500,(RESIC180_11_Cirripectes_castaneus:0.0000000000,KU7056_Cirripectes_castaneus:0.0000000600):0.9999:0.0000000600):1.0000:0.0032009700,(((RS7740_Cirripectes_castaneus:0.0000000000,(ROT604_Cirripectes_castaneus:0.0000001100,GBMIN121923_17_Cirripectes_castaneus:0.0000000700):0.9999:0.0000000900):1.0000:0.0016556300,(SAIAB1074_08_Cirripectes_castaneus:0.0000000600,((COLOR469_15_Cirripectes_castaneus:0.0000001200,R0301_021_Cirripectes_stigmaticus:0.0000000000):1.0000:0.0064955600,(SBF724_11_Cirripectes_castaneus:0.0000001200,REU189_1_Cirripectes_stigmaticus:0.0000000000):1.0000:0.0016090300):0.9999:0.0000000600):1.0000:0.0000000600):1.0000:0.0015960000,((SAIAB024_06_Cirripectes_castaneus:0.0032875200,SAIAB025_06_Cirripectes_castaneus:0.0016294300):1.0000:0.0000001100,(PHILA1567_15_Cirripectes_castaneus:0.0016063500,(GBMIN131289_17_Cirripectes_castaneus:0.0000000000,1325_Cirripectes_castaneus:0.0000000700):1.0000:0.0047287700):0.9999:0.0000001200):0.9999:0.0000000800):0.9999:0.0000001200):0.9999:0.0000001200):1.0000:0.0000000600,(LIFS795_08_Cirripectes_castaneus:0.0000000000,UG0610_Cirripectes_stigmaticus:0.0000001200):0.9999:0.0015715000):0.9999:0.0016582100):0.9999:0.0000000600):0.9999:0.0000000700):1.0000:0.0033480800):1.0000:0.0000000000):1.0000:0.0206119600,((AUST_163_Cirripectes_variolosus:0.0000001200,(AUST_056_Cirripectes_variolosus:0.0000000000,(Crv_026_Cirripectes_variolosus:0.0019986500,((FPFLB356_12_Cirripectes_variolosus:0.0000001300,FLMOO_1106_Cirripectes_variolosus:0.0000000000):1.0000:0.0015714700,((AUST_162_Cirripectes_variolosus:0.0047421400,GAM_794_Cirripectes_variolosus:0.0000000000):0.9999:0.0000000000,(MBIO3084_Cirripectes_variolosus:0.0000000000,(GAM_793_Cirripectes_variolosus:0.0031474600,(MBFA187_07_Cirripectes_variolosus:0.0000000000,((AUST_164_Cirripectes_variolosus:0.0015789100,(GAM_143_Cirripectes_variolosus:0.0000000000,(MBFA186_07_Cirripectes_variolosus:0.0000000600,MBIO3074_Cirripectes_variolosus:0.0000000000):0.9999:0.0000001200):1.0000:0.0015718300):1.0000:0.0015713600,((AUSTR052_13_Cirripectes_variolosus:0.0000000500,GAM_144_Cirripectes_variolosus:0.0000000000):1.0000:0.0031614200,(GAM_145_Cirripectes_variolosus:0.0031550500,(MARQ_073_Cirripectes_variolosus:0.0048067700,(MARQ_071_Cirripectes_variolosus:0.0015771400,(Crv_024_Cirripectes_variolosus:0.0020010900,MARQ_074_Cirripectes_variolosus:0.0031647900):0.9999:0.0000001000):1.0000:0.0032290800):1.0000:0.0031702600):0.9999:0.0000000700):0.9999:0.0000000700):0.9999:0.0015696700):0.9999:0.0000000000):0.9999:0.0000001200):0.9999:0.0000001100):0.9999:0.0015694300):0.9999:0.0000001000):0.9999:0.0000000000):1.0000:0.0031554000):1.0000:0.0506135800,((Pta_BLN0831:0.5361364600,(UKFBK089_08_Cirripectes_stigmaticus:0.0000001100,KUT_687_Cirripectes_stigmaticus:0.0000000000):1.0000:0.0061248200):0.9999:0.0018790700,(UKFBI528_08_Cirripectes_stigmaticus:0.0000001300,KUT_4023_Cirripectes_stigmaticus:0.0000000000):0.9999:0.0000000500):0.9999:0.0300822400):0.9999:0.0019256600):1.0000:0.0131936900):1.0000:0.1328493800):1.0000:0.0310191000):1.0000:0.1218639800);
+ 
+Note: this tree is unrooted. Branch lengths are the expected number of substitutions per site. Labels next to parentheses represent phylogenetic uncertainty due to model selection (see documentation)
+ 
+ 
+ 
+---------------------------------------------------------------
+*                                                             *
+*                    SELECTION SUMMARY                        *
+*                                                             *
+---------------------------------------------------------------
+
+::Optimized Topologies Summary::
+
+There are 24 different topologies.
+
+Topology Id: 1
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  1	 99.99%		  0	0.00e+00	0.00e+00
+Models supporting:   1
+                     HKY+I+G 
+
+Topology Id: 2
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  2	  0.00%		 32	6.40e-01	0.00e+00
+Models supporting:   1
+                     JC+I+G 
+
+Topology Id: 3
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  3	  0.00%		144	6.72e-01	0.00e+00
+Models supporting:   1
+                     HKY+I 
+
+Topology Id: 4
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  4	  0.00%		146	6.57e-01	0.00e+00
+Models supporting:   1
+                     SYM+I 
+
+Topology Id: 5
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  5	  0.00%		148	6.19e-01	0.00e+00
+Models supporting:   1
+                     F81+I 
+
+Topology Id: 6
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  6	  0.00%		152	6.79e-01	0.00e+00
+Models supporting:   1
+                     K80+I 
+
+Topology Id: 7
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  7	  0.00%		152	6.08e-01	0.00e+00
+Models supporting:   1
+                     HKY 
+
+Topology Id: 8
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  8	  0.00%		152	7.16e-01	0.00e+00
+Models supporting:   1
+                     SYM+I+G 
+
+Topology Id: 9
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	  9	  0.00%		152	6.54e-01	0.00e+00
+Models supporting:   1
+                     GTR+I 
+
+Topology Id: 10
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 10	  0.00%		154	6.46e-01	0.00e+00
+Models supporting:   1
+                     F81+I+G 
+
+Topology Id: 11
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 11	  0.00%		154	7.19e-01	0.00e+00
+Models supporting:   1
+                     HKY+G 
+
+Topology Id: 12
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 12	  0.00%		154	6.07e-01	0.00e+00
+Models supporting:   1
+                     SYM 
+
+Topology Id: 13
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 13	  0.00%		156	6.08e-01	0.00e+00
+Models supporting:   1
+                     F81 
+
+Topology Id: 14
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 14	  0.00%		156	6.28e-01	0.00e+00
+Models supporting:   1
+                     F81+G 
+
+Topology Id: 15
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 15	  0.00%		156	6.72e-01	0.00e+00
+Models supporting:   1
+                     SYM+G 
+
+Topology Id: 16
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 16	  0.00%		156	6.08e-01	0.00e+00
+Models supporting:   1
+                     GTR 
+
+Topology Id: 17
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 17	  0.01%		158	7.56e-01	0.00e+00
+Models supporting:   1
+                     GTR+I+G 
+
+Topology Id: 18
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 18	  0.00%		160	6.08e-01	0.00e+00
+Models supporting:   1
+                     K80 
+
+Topology Id: 19
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 19	  0.00%		162	6.19e-01	0.00e+00
+Models supporting:   1
+                     JC+I 
+
+Topology Id: 20
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 20	  0.00%		162	6.86e-01	0.00e+00
+Models supporting:   1
+                     K80+G 
+
+Topology Id: 21
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 21	  0.00%		162	7.37e-01	0.00e+00
+Models supporting:   1
+                     K80+I+G 
+
+Topology Id: 22
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 22	  0.00%		162	6.98e-01	0.00e+00
+Models supporting:   1
+                     GTR+G 
+
+Topology Id: 23
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 23	  0.00%		164	6.08e-01	0.00e+00
+Models supporting:   1
+                     JC 
+
+Topology Id: 24
+	Rank	Weight		 RF	AvgEucl		VarEucl
+AICc	 24	  0.00%		168	6.25e-01	0.00e+00
+Models supporting:   1
+                     JC+G 
+
+ 
+ 
+ 
+::Best Models::
+ 
+	Model 		f(a) 	f(c) 	f(g) 	f(t) 	kappa 	titv 	Ra	Rb	Rc	Rd	Re	Rf	pInv 	gamma
+----------------------------------------------------------------------------------------------------------------------------------------
+AICc 	HKY+I+G		0.27	0.24	0.17	0.32	11.34	5.63	  1.000  11.338   1.000   1.000  11.338   1.000    0.58	   1.41
