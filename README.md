@@ -34,8 +34,10 @@ Hoban, ML, Williams, JT, 2019. *Cirripectes matatakaro*, a new species of combto
   - 'species': species
   - 'island','country','region': locality information
 - treebuild2.nex.con.tre -- COI phylogeny tree file (old, unused)
--  variolosus-vanderbilti-geocoded.csv -- specimen occurrence data from GBIF with geocoded locations (where coordinates where lacking)
-    - see GBIF.org for file format
+- variolosus-vanderbilti-geocoded.csv -- specimen occurrence data from GBIF with geocoded locations (where coordinates where lacking)
+  - see GBIF.org for file format
+- PartitionFinder_output.txt -- best partitioned substitution model scenario (AICc) output from PartitionFinder
+- jModelTest2_output.txt -- best nonpartitioned substitution model scenario (AICc) output from jModelTest2
 
 ### sequence
 - vanderbilti-redhead-coi.fasta -- COI sequence data for C. vanderbilti and C. matatakaro
