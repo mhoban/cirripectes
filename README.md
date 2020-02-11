@@ -16,8 +16,6 @@ Hoban, ML, Williams, JT, 2019. *Cirripectes matatakaro*, a new species of combto
 - cirripectes_tree_mrbayes.R -- format and display COI phylogeny
 
 ### data
-- blennies-combined-consensus-renamed.tre -- calibrated divergence timetree (obsolete, unused)
-- cirripectes-684-reduced.nex.con.tre -- COI phylogeny tree file (current, used)
 - cirripectes_specimens.xlsx -- morphological specimen data
 - new_sp_occurrence.csv -- geographical occurrence data for C. matatakaro returned from google geocoding algorithm
   - 'lon': longitude
@@ -33,11 +31,29 @@ Hoban, ML, Williams, JT, 2019. *Cirripectes matatakaro*, a new species of combto
   - 'id': sequence identifier
   - 'species': species
   - 'island','country','region': locality information
-- treebuild2.nex.con.tre -- COI phylogeny tree file (old, unused)
 - variolosus-vanderbilti-geocoded.csv -- specimen occurrence data from GBIF with geocoded locations (where coordinates where lacking)
   - see GBIF.org for file format
 - PartitionFinder_output.txt -- best partitioned substitution model scenario (AICc) output from PartitionFinder
 - jModelTest2_output.txt -- best nonpartitioned substitution model scenario (AICc) output from jModelTest2
+
+### tree
+- cirripectes-684-reduced.nex -- MrBayes input file / NEXUS alignment
+  - partitioned substitution model (see below)
+- cirripectes-684-reduced.nex.con.tre -- COI phylogeny tree file (current, used)
+  - outgroup: *Plagiotremus tapeinosoma*
+  - MrBayes MCMC run: 2e8 generations, 20% burn-in
+  - partitioned substitution model
+    - codon 1: GTR+G
+    - codon 2: F81+G
+    - codon 3: GTR+I+G
+- cirripectes-HKY-nonpartitioned.tre -- COI phylogeny tree file (secondary)
+  - outgroup: *Plagiotremus tapeinosoma*
+  - MrBayes MCMC run: 2e7 generations, 20% burn-in
+  - substitution mode: HKY+I+G
+- treebuild2.nex.con.tre -- COI phylogeny tree file (old, unused)
+  - outgroup: *Exallias brevis*
+  - MrBayes MCMC run: 3e7 generations, 20% burn-in
+  - substitution model: GTR+I+G
 
 ### sequence
 - vanderbilti-redhead-coi.fasta -- COI sequence data for C. vanderbilti and C. matatakaro
