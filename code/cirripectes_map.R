@@ -12,6 +12,7 @@ library(mapview)
 library(mSpatial)
 library(sf)
 library(here)
+library(RColorBrewer)
 
 ##### gbif citation info ######
 # When using this dataset please use the following citation:

@@ -7,7 +7,7 @@ library(here)
 
 
 # load the tree data
-tree <- ggtree::read.mrbayes(here("data","cirripectes-684-reduced.nex.con.tre"))
+tree <- ggtree::read.mrbayes(here("tree","cirripectes-684-reduced.nex.con.tre"))
 
 # Reroot the tree on the outgroup (Plagiotremus tapeinosoma), giving it the same branch length that figtree would
 tree@phylo <- reroot(tree@phylo,1,position = tree@phylo$edge.length[which(tree@phylo$edge[,2]==1)]/2)

@@ -5,7 +5,7 @@ library(deeptime)
 library(treeio)
 library(here)
 
-tree <- ggtree::read.beast(here("data","blennies-combined-consensus-renamed.tre"))
+tree <- ggtree::read.beast(here("tree","blennies-combined-consensus-renamed.tre"))
 
 # duplicate tip taxa to drop from the final displayed tree
 tip_drop <- c("ANGBF9231-12_Cirripectes_auritus_0",
