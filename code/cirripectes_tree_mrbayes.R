@@ -67,7 +67,8 @@ ggtree(tr,ladderize = T) +
   # automate this and couldn't get them to format properly so it's just done
   # manually. the lone geom_strip call is because that species doesn't have a
   # "clade" since it's just one tip so it has to be a "strip" label instead of a clade label
-  geom_cladelabel(node=212,'atop(bolditalic(C.~cf.~randalli)~"           ","(Western Indian Ocean)")',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
+  # geom_cladelabel(node=212,'atop(bolditalic(C.~cf.~randalli)~"           ","(Western Indian Ocean)")',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
+  geom_cladelabel(node=212,'bolditalic(C.~cf.~randalli)',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
   geom_cladelabel(node=206,'bolditalic(C.~fuscoguttatus)',align=F,offset=0.0026,barsize=bars,parse=T, fontsize = font.size) +
   
   geom_cladelabel(node=198,'bolditalic(C.~filamentosus)',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
@@ -77,7 +78,7 @@ ggtree(tr,ladderize = T) +
   geom_cladelabel(node=221,'bolditalic(C.~polyzona)',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
   
   geom_cladelabel(node=225,'atop(bolditalic(C.~vanderbilti)~"              ","(Hawai‘i & Johnston Atoll)")',align=F,offset=0.00335,barsize=bars,parse=T, fontsize = font.size) +
-  geom_cladelabel(node=223,'atop(bolditalic(C.~matatakaro)~bold( sp.~nov.),"(South/Central Pacific)      ")',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
+  geom_cladelabel(node=223,'atop(bolditalic(C.~matatakaro)~bold( sp.~nov.)~"                                 ","(South/Central Pacific, ID\'d as"~bolditalic(C.~variolosus)~")")',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
   
   geom_cladelabel(node=226,'bolditalic(C.~stigmaticus)',align=T,offset=-0.085,barsize=bars,parse=T, fontsize = font.size) +
   
@@ -100,9 +101,9 @@ ggtree(tr,ladderize = T) +
   # show the branch length scale
   geom_treescale(x=0.15,y=-5) +
   # extend the viewable area to avoid text cutoff
-  xlim(-0.005,0.275) +
+  xlim(-0.005,0.29) +
   # position and style the posterior prob color legend
-  theme(legend.position = c(0.1,0.9)) +
+  #theme(legend.position = c(0.1,0.9)) +
   guides(fill = guide_legend(override.aes = list(size = 5)))
 
 # ---- nodes numbers of note ----
