@@ -78,13 +78,13 @@ ggtree(tr,ladderize = T) +
   geom_cladelabel(node=221,'bolditalic(C.~polyzona)',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
   
   geom_cladelabel(node=225,'atop(bolditalic(C.~vanderbilti)~"              ","(Hawai‘i & Johnston Atoll)")',align=F,offset=0.00335,barsize=bars,parse=T, fontsize = font.size) +
-  geom_cladelabel(node=223,'atop(bolditalic(C.~matatakaro)~bold( sp.~nov.)~"                                 ","(South/Central Pacific, ID\'d as"~bolditalic(C.~variolosus)~")")',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
+  geom_cladelabel(node=223,'atop(bolditalic(C.~matatakaro)~bold( sp.~nov.)~"                            ","(Haplotype lineage B: South/Central Pacific)")',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +
   
   geom_cladelabel(node=226,'bolditalic(C.~stigmaticus)',align=T,offset=-0.085,barsize=bars,parse=T, fontsize = font.size) +
   
   geom_cladelabel(node=228,'bolditalic(C.~castaneus)',align=F,offset=0.001,barsize=bars,parse=T, fontsize = font.size) +
   
-  geom_cladelabel(node=241,'atop(bolditalic(C.~variolosus),"(Pacific Plate)    ")',align=T,offset=-0.08,barsize=bars,parse=T, fontsize = font.size) +
+  geom_cladelabel(node=241,'atop(bolditalic(C.~variolosus)~"                              ","(Haplotype lineage A: Pacific Plate)")',align=T,offset=-0.08,barsize=bars,parse=T, fontsize = font.size) +
   
   # geom_cladelabel(node=141,'bolditalic(C.~`"`~lineopunctatus~`"`)~"(Hawai‘i)"',align=F,offset=offs+0.002,barsize=bars,parse=T) +
   geom_cladelabel(node=179,'bolditalic(C.~quagga)',align=F,offset=offs,barsize=bars,parse=T, fontsize = font.size) +

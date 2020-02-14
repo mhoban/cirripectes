@@ -12,7 +12,8 @@ Hoban, ML, Williams, JT, 2019. *Cirripectes matatakaro*, a new species of combto
 - cirripectes_genetic_stats.R -- calculate genetic summary statistics
 - cirripectes_map.R -- create distribution map (requires google API key / billing)
 - cirripectes_pca.R -- calculate and plot principal components analysis (PCA)
-- cirripectes_tree_beast.R -- format and display divergence timetree (obsolete, unused)
+- cirripectes_tree_beast.R -- format and display divergence timetree
+  - this is left over from a previous version of the paper
 - cirripectes_tree_mrbayes.R -- format and display COI phylogeny
 
 ### data
@@ -47,10 +48,12 @@ Hoban, ML, Williams, JT, 2019. *Cirripectes matatakaro*, a new species of combto
     - codon 2: F81+G
     - codon 3: GTR+I+G
 - cirripectes-HKY-nonpartitioned.tre -- COI phylogeny tree file (secondary)
+  -this is a secondary analysis using a nonpartitioned substitution model
   - outgroup: *Plagiotremus tapeinosoma*
   - MrBayes MCMC run: 2e7 generations, 20% burn-in
   - substitution mode: HKY+I+G
-- treebuild2.nex.con.tre -- COI phylogeny tree file (old, unused)
+- treebuild2.nex.con.tre -- COI phylogeny tree file 
+  - this is retained from a previous version of the manuscript
   - outgroup: *Exallias brevis*
   - MrBayes MCMC run: 3e7 generations, 20% burn-in
   - substitution model: GTR+I+G
